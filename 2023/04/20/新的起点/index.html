@@ -10,6 +10,8 @@
     <meta name="author" content="ClearMeander">
 
 
+    <meta name="subtitle" content="Meander's Blog">
+
 
 
 
@@ -220,6 +222,68 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -250,21 +314,11 @@
 
         <div class="post-content">
             <img src="https://images.pexels.com/photos/5507254/pexels-photo-5507254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="叫不出名字的花">
-### 新的起点
-头晕眼花的搞了两天，我觉得我已经成仙了，头皮发麻
-讲什么呢，不好讲
-### 我会在博客发布什么内容？
-发软件分享，各种软件的使用方式分享
-个人经验分享，思想感悟
-学习分享，跨制造设计金融经济社会软件各种各样的学习内容吧
-分享歌单，分享电影
-有时候随机的心得感悟
-有时候是自己看的诗，有时是自己做的诗
-对了我还可以每天看新闻，分享新闻和点评时事
-*这样看来我可以分享的内容还是挺多的。。。*
-### 我未来打算做什么？怎么做？
-做的主业不说了，副业就是学习，我想要一种自由学习的生活，想做的太多，脚踏实地为好。
-那先搞好主业吧
+
+<h3 id="新的起点"><a href="#新的起点" class="headerlink" title="新的起点"></a>新的起点</h3><p>头晕眼花的搞了两天，我觉得我已经成仙了，头皮发麻<br>讲什么呢，不好讲</p>
+<h2 id="我会在博客发布什么内容？"><a href="#我会在博客发布什么内容？" class="headerlink" title="我会在博客发布什么内容？"></a>我会在博客发布什么内容？</h2><p>发软件分享，各种软件的使用方式分享<br>个人经验分享，思想感悟<br>学习分享，跨制造设计金融经济社会软件各种各样的学习内容吧<br>分享歌单，分享电影<br>有时候随机的心得感悟<br>有时候是自己看的诗，有时是自己做的诗<br>对了我还可以每天看新闻，分享新闻和点评时事<br><em>这样看来我可以分享的内容还是挺多的。。。</em></p>
+<h2 id="我未来打算做什么？怎么做？"><a href="#我未来打算做什么？怎么做？" class="headerlink" title="我未来打算做什么？怎么做？"></a>我未来打算做什么？怎么做？</h2><p>做的主业不说了，副业就是学习，我想要一种自由学习的生活，想做的太多，脚踏实地为好。<br>那先搞好主业吧</p>
+
         </div>
 
         
