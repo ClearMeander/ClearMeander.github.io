@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>和newbing的交谈记录（营养与健康） | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        !
+        function() {
+        function n(n, e, t) {
+        return n.getAttribute(e) || t
+        }
+        function e(n) {
+        return document.getElementsByTagName(n)
+        }
+        function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+        l: o,
+        z: n(i, "zIndex", -1), //置于主页面背后
+        o: n(i, "opacity", .5), //线条透明度
+        c: n(i, "color", "0,0,0"), //线条颜色
+        n: n(i, "count", 100) //线条数量
+        }
+        }
+        function o() {
+        a = m.width = window.innerWidth ||
+        document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight ||
+        document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 :
+        1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1,
+        1), e = x + 1; e < u.length; e++) n = u[e],
+        null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l
+        = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o,
+        i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t /
+        2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y),
+        r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+        }
+        var a, c, u, m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame
+        || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(n) {
+        window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+        x: null,
+        y: null,
+        max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z +
+        ";opacity:" + d.o,
+        e("body")[0].appendChild(m),
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+        },
+        window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+        x: h,
+        y: g,
+        xa: v,
+        ya: p,
+        max: 6e3
+        })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+        i()
+        },
+        100)
+        } ();
+        </script>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ClearMeander&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ClearMeander&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">和newbing的交谈记录（营养与健康）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 20, 2023&nbsp;&nbsp;3:27:21</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B/">ai大模型</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="我身高175cm，体重65kg，推荐一下健康的饮食"><a href="#我身高175cm，体重65kg，推荐一下健康的饮食" class="headerlink" title="我身高175cm，体重65kg，推荐一下健康的饮食"></a>我身高175cm，体重65kg，推荐一下健康的饮食</h3><p>04.15 15:59<br>你好，根据你的身高和体重，你的BMI（体质指数）是21.2，属于正常范围²。但是BMI并不能完全反映你的身材和健康状况，你还需要考虑你的体脂率、肌肉量、骨密度等因素。一般来说，成年男性的理想体脂率是10%<del>20%，理想肌肉量是40%</del>50%，理想骨密度是1.0~1.5g&#x2F;cm³。</p>
+<p>如果你想要增肥练肌肉，你需要注意以下几点：</p>
+<ul>
+<li>增加蛋白质的摄入。蛋白质是肌肉的主要组成成分，也是增肌的必需营养素。你可以多吃一些富含优质蛋白质的食物，如鸡蛋、牛奶、鱼肉、豆制品等。一般来说，每天至少需要摄入1.5~2g&#x2F;kg体重的蛋白质。</li>
+<li>控制碳水化合物和脂肪的摄入。碳水化合物和脂肪是提供能量的营养素，也是增肥的主要原因。你可以适当吃一些复合碳水化合物，如全麦面包、燕麦、土豆等，以维持血糖稳定和提供持久的能量。你也可以适当吃一些不饱和脂肪酸，如坚果、橄榄油、鱼油等，以促进激素分泌和保护关节。一般来说，每天需要摄入4<del>6g&#x2F;kg体重的碳水化合物和0.8</del>1g&#x2F;kg体重的脂肪。</li>
+<li>坚持有氧运动和力量训练。有氧运动可以提高心肺功能和耐力，也可以消耗多余的热量和脂肪。力量训练可以刺激肌肉生长和代谢，也可以增加骨密度和关节稳定性。你可以根据自己的目标和时间安排合理地安排运动计划。一般来说，每周至少需要进行3<del>4次有氧运动和2</del>3次力量训练。</li>
+<li>保证充足的休息和睡眠。休息和睡眠是恢复体力和精神的重要途径，也是促进肌肉生长和修复的关键时期。你可以在运动后适当地进行拉伸和按摩，以缓解肌肉酸痛和紧张。你也可以保证每天7~8小时的高质量睡眠，以调节激素水平和提高免疫力。</li>
+</ul>
+<p>这就是我给你的一些关于增肥练肌肉的建议，希望对你有所帮助。</p>
+<p>源: 与必应的对话， 2023&#x2F;4&#x2F;15<br>(1) 男生身高175cm 体重65kg怎么增肥练肌肉？ - 知乎. <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/304753218">https://www.zhihu.com/question/304753218</a>.<br>(2) 男性、女性一日摄入能量标准值一览表 - 知乎 - 知乎专栏. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/403135622">https://zhuanlan.zhihu.com/p/403135622</a>.<br>(3) 175cmで65kgの見た目は？男女別の体型・BMI・理想体重・有名人 | KARADA診断. <a target="_blank" rel="noopener" href="https://karada-shindan.com/175cm-65kg">https://karada-shindan.com/175cm-65kg</a>.<br>(4) 本人男,身高175cm,体重65kg</p>
+<h3 id="请给出具体的量化的饮食建议，比如一天吃多少苹果，喝多少水。"><a href="#请给出具体的量化的饮食建议，比如一天吃多少苹果，喝多少水。" class="headerlink" title="请给出具体的量化的饮食建议，比如一天吃多少苹果，喝多少水。"></a>请给出具体的量化的饮食建议，比如一天吃多少苹果，喝多少水。</h3><p>04.15 16:04<br>好的，我来给你一些具体的建议。</p>
+<ul>
+<li>一天应该吃1~2个鸡蛋，每个鸡蛋含有约6g的蛋白质，可以满足你一部分的蛋白质需求。你可以选择煮鸡蛋、水煮蛋、炒鸡蛋等不同的做法，但是要避免油炸或加工过的鸡蛋，以减少不必要的热量和油脂。</li>
+<li>一天应该喝8<del>10杯水，每杯约250ml，总共约2</del>2.5L。水是人体最重要的组成成分，也是维持生命活动的基本条件。你可以选择白开水、矿泉水、茶水等不同的饮品，但是要避免含糖或碳酸的饮料，以减少不必要的热量和添加剂。</li>
+<li>一天应该吃3<del>4份肉类，每份约100g，总共约300</del>400g。肉类是富含优质蛋白质和铁质的食物，可以增加肌肉量和血红蛋白。你可以选择鸡肉、牛肉、猪肉、羊肉等不同的肉类，但是要避免肥肉或加工过的肉类，以减少不必要的热量和油脂。</li>
+<li>一天应该吃4<del>6份谷物，每份约50g，总共约200</del>300g。谷物是富含复合碳水化合物和膳食纤维的食物，可以提供持久的能量和促进消化。你可以选择大米、面条、面包、玉米等不同的谷物，但是要避免精制或加工过的谷物，以减少不必要的热量和添加剂。</li>
+<li>一天应该吃3<del>5份蔬菜，每份约100g，总共约300</del>500g。蔬菜是富含维生素和矿物质的食物，可以提供多种营养素和抗氧化剂。你可以选择青菜、胡萝卜、西红柿、黄瓜等不同的蔬菜，但是要避免油炸或加工过的蔬菜，以减少不必要的热量和油脂。</li>
+<li>一天应该吃2<del>3份水果，每份约150g，总共约300</del>450g。水果是富含维生素和果糖的食物，可以提供多种营养素和甜味。你可以选择苹果、香蕉、橙子、梨等不同的水果，但是要避免罐头或加工过的水果，以减少不必要的热量和添加剂。</li>
+<li>一天应该吃1<del>2份奶制品，每份约200ml或50g，总共约200</del>400ml或50~100g。奶制品是富含优质蛋白质和钙质的食物，可以增加肌肉量和骨密度。你可以选择牛奶、酸奶、奶酪等不同的奶制品，但是要避免高脂或加工奶制品，以减少不必要的热量和油脂。</li>
+<li>一天应该吃1<del>2份坚果或种子，每份约25g，总共约25</del>50g。坚果或种子是富含不饱和脂肪酸和蛋白质的食物，可以提供健康的油脂和激素素材。你可以选择核桃、杏仁、花生、芝麻等不同的坚果或种子，但是要避免炒制或加工过的坚果或种子，以减少不必要的热量和添加剂。</li>
+</ul>
+<p>这就是我给你的一些关于合理饮食的建议，希望对你有所帮助。</p>
+<h3 id="我是xxx省xxx市的人，请你按季节时令推荐出既便宜又满足营养需要的健康的食材单"><a href="#我是xxx省xxx市的人，请你按季节时令推荐出既便宜又满足营养需要的健康的食材单" class="headerlink" title="我是xxx省xxx市的人，请你按季节时令推荐出既便宜又满足营养需要的健康的食材单"></a>我是xxx省xxx市的人，请你按季节时令推荐出既便宜又满足营养需要的健康的食材单</h3><p>04.15 16:13<br>你好，根据你所在的地方物价，我给你提供一个最低消费的食材单，尽量满足你所说的那些食物。同时，我也会根据季节或者月份的变化来做出一些调整，以保证食物的新鲜和营养。</p>
+<ul>
+<li><p>一月份的食材单如下：</p>
+<ul>
+<li><p>鸡蛋：每天1个，每个约1.5元，每月约45元。</p>
+</li>
+<li><p>水：每天8杯，每杯约0.1元，每月约24元。</p>
+</li>
+<li><p>鸡肉：每天100g，每500g约15元，每月约90元。</p>
+</li>
+<li><p>大米：每天100g，每500g约3元，每月约18元。</p>
+</li>
+<li><p>青菜：每天100g，每500g约2元，每月约12元。</p>
+</li>
+<li><p>胡萝卜：每天50g，每500g约3元，每月约9元。</p>
+</li>
+<li><p>苹果：每天100g，每500g约5元，每月约30元。</p>
+</li>
+<li><p>牛奶：每天200ml，每L约10元，每月约60元。</p>
+</li>
+<li><p>花生：每天25g，每500g约10元，每月约15元。</p>
+</li>
+<li><p>总计：每天约28.5元，每月约855元。</p>
+</li>
+</ul>
+</li>
+<li><p>四月份的食材单如下：</p>
+<ul>
+<li><p>鸡蛋：同上</p>
+</li>
+<li><p>水：同上</p>
+</li>
+<li><p>鸡肉：同上</p>
+</li>
+<li><p>大米：同上</p>
+</li>
+<li><p>青菜：同上</p>
+</li>
+<li><p>西红柿：每天50g，每500g约4元，每月约12元。</p>
+</li>
+<li><p>香蕉：每天100g，每500g约6元，每月约36元。</p>
+</li>
+<li><p>酸奶：每天200ml，每L约12元，每月约72元。</p>
+</li>
+<li><p>杏仁：每天25g，每500g约20元，每月约30元。</p>
+</li>
+<li><p>总计：每天约31.5元，每月约945元。</p>
+</li>
+</ul>
+</li>
+<li><p>七月份的食材单如下：</p>
+<ul>
+<li>鸡蛋：同上</li>
+<li>水：同上</li>
+<li>猪肉：每天100g，每500g约20元，每月约120元。</li>
+<li>面条：每天100g，每500g约4元，每月约24元。</li>
+<li>菠菜：每天100g，每500g约3元，每月约18元。</li>
+<li>黄瓜：每天50g，每500g约2.5元，每月约7.5元。</li>
+<li>橙子：每天100g，每500g约7.5元，每月约45元。</li>
+<li>奶酪：每天50g，每500g约30元，每月约90元。</li>
+<li>芝麻：</li>
+</ul>
+</li>
+<li><p>每天25g，每500g约15元，每月约22.5元。</p>
+</li>
+<li><p>总计： 每天约34.5元， 每月约1035 元。</p>
+</li>
+</ul>
+<p>十月份的食材单如下：</p>
+<ul>
+<li><p>鸡蛋：同上</p>
+</li>
+<li><p>水：同上</p>
+</li>
+<li><p>牛肉：每天100g，每500g约25元，每月约150元。</p>
+</li>
+<li><p>面包：每天100g，每500g约5元，每月约30元。</p>
+</li>
+<li><p>白菜：每天100g，每500g约1.5元，每月约9元。</p>
+</li>
+<li><p>土豆：每天50g，每500g约2元，每月约6元。</p>
+</li>
+<li><p>梨：每天100g，每500g约4元，每月约24元。</p>
+</li>
+<li><p>牛奶：同上</p>
+</li>
+<li><p>核桃：每天25g，每500g约30元，每月约45元。</p>
+</li>
+<li><p>总计： 每天约30.5元， 每月约915 元。</p>
+</li>
+</ul>
+<p>这就是我给你的一些关于合理饮食的建议，希望对你有所帮助。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://clearmeander.github.io/2023/04/20/%E5%92%8Cnewbing%E7%9A%84%E4%BA%A4%E8%B0%88%E8%AE%B0%E5%BD%95/">http://clearmeander.github.io/2023/04/20/%E5%92%8Cnewbing%E7%9A%84%E4%BA%A4%E8%B0%88%E8%AE%B0%E5%BD%95/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/newbing/"># newbing</a>
+                    
+                        <a href="/tags/%E9%A5%AE%E9%A3%9F%E5%81%A5%E5%BA%B7/"># 饮食健康</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/04/20/%E5%92%8Cnewbing%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%8C%BB%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%E7%9A%84%E8%AE%A8%E8%AE%BA/">和newbing关于中医基本理论的讨论</a>
+            
+            
+            <a class="next" rel="next" href="/2023/04/20/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9/">新的起点</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
