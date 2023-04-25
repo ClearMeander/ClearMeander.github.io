@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>关于cahtgpt的若干问题合集 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        !
+        function() {
+        function n(n, e, t) {
+        return n.getAttribute(e) || t
+        }
+        function e(n) {
+        return document.getElementsByTagName(n)
+        }
+        function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+        l: o,
+        z: n(i, "zIndex", -1), //置于主页面背后
+        o: n(i, "opacity", .5), //线条透明度
+        c: n(i, "color", "0,0,0"), //线条颜色
+        n: n(i, "count", 100) //线条数量
+        }
+        }
+        function o() {
+        a = m.width = window.innerWidth ||
+        document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight ||
+        document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 :
+        1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1,
+        1), e = x + 1; e < u.length; e++) n = u[e],
+        null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l
+        = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o,
+        i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t /
+        2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y),
+        r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+        }
+        var a, c, u, m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame
+        || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(n) {
+        window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+        x: null,
+        y: null,
+        max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z +
+        ";opacity:" + d.o,
+        e("body")[0].appendChild(m),
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+        },
+        window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+        x: h,
+        y: g,
+        xa: v,
+        ya: p,
+        max: 6e3
+        })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+        i()
+        },
+        100)
+        } ();
+        </script>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ClearMeander&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ClearMeander&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">关于cahtgpt的若干问题合集</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 25, 2023&nbsp;&nbsp;23:54:41</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%AE%89%E5%88%A9/">安利</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/9a09375a4314a3f418ae3aecc846d5d5.jpg" alt="阳台"></p>
+<h3 id="账号注册问题"><a href="#账号注册问题" class="headerlink" title="账号注册问题"></a>账号注册问题</h3><p>注册攻略我就不重复写了，这个是攻略！[账号注册]（<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YM4y1D7bs/?share_source=copy_web&vd_source=005835163b1cfc9001ac8ddc79969dfb%EF%BC%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%9C%B0%E5%9D%80%E3%80%82">https://www.bilibili.com/video/BV1YM4y1D7bs/?share_source=copy_web&amp;vd_source=005835163b1cfc9001ac8ddc79969dfb）的视频地址。</a><br>是两个月前的视频，当时还不太泛滥的时候，这样可以，但是现在泛滥了，就不好用了，主要是节点问题，这个问题的解决方法就是去注册的人少的代理节点。</p>
+<h3 id="升级chatgptplus版的问题"><a href="#升级chatgptplus版的问题" class="headerlink" title="升级chatgptplus版的问题"></a>升级chatgptplus版的问题</h3><ul>
+<li>升级渠道（淘宝）<br>虚拟卡淘宝上我了解的价位是这样的，20r开卡一个月，30r开卡三个月，40r开卡十二个月，然后7.5r一刀充。所以首月升级的最低价格是170。（此为我去年12月做亚马逊时候的资费，目前情况可能更贵）</li>
+<li>升级渠道（我所掌握的）<br>1-5刀开卡12个月（分卡段以及开卡量，我目前开卡量为1——自用），算上手续费和平台汇率接近，7.4r一刀，首月成本差不多是160</li>
+<li>升级方式</li>
+<li>全局代理(需要纯净节点)</li>
+<li>在 ChatGPT 首页点击「Upgrade to Plus」</li>
+<li>信用卡信息<br>虚拟信用卡账户、姓名等信息</li>
+<li>地址信息</li>
+</ul>
+<ul>
+<li>使用免税地址信息填写账单地址<br> <img src="https://www.meiguodizhi.com/usa-address/montana-" alt="随机地址信息生成器"></li>
+</ul>
+<ul>
+<li>订阅</li>
+</ul>
+<h3 id="你是否真的需要升级plus？"><a href="#你是否真的需要升级plus？" class="headerlink" title="你是否真的需要升级plus？"></a>你是否真的需要升级plus？</h3><p>先说结论，对于不进行创作，不进行设计，不需要码代码的用户来说，升级的意义不大。<br>4.0和3.5的区别在于</p>
+<ul>
+<li>优先使用权，在高峰期时候具有优先响应通道</li>
+<li>更大的模型，更完善和更精密的回答</li>
+<li>支持插件功能<br>以上的内容不够具体，使用别人具体的说法来说，就是chatgpt4.0可以主动帮用户完善问题的约束条件，你的需求不够具体，它优先帮你补充。<br>对于处理速度，gpt4.o相对于3.5其实处理文本更慢，因为更大的模型更精密的计算需要时间。<br>另外每3个小时4.0限25条问答。多人使用无法并行。</li>
+</ul>
+<h3 id="chatgpt浏览器插件推荐"><a href="#chatgpt浏览器插件推荐" class="headerlink" title="chatgpt浏览器插件推荐"></a>chatgpt浏览器插件推荐</h3><ul>
+<li>voice control for chatgpt<br>这是一个语音插件，你可以用这个和chatgpt对话练口语。(我知道这东西，但我除了第一天用其他时候都关闭了，谁还练口语啊，但不得不说功能强大)</li>
+<li>chatgpt-pdf<br>可以把chatgpt的聊天记录导出为txt，png，pdf，.md的一个插件。下载方式是github搜索chatgpt-pdf，作者liady，那个stars最多的就是了，安装方式就是下载后，进edge扩展界面打开开发者模式，拖进去，就安装扩展了。<br><img src="https://github.com/liady/ChatGPT-pdf" alt="chatgpt-pdf链接"></li>
+<li>keepchatgpt<br>这是一个油猴插件，安装方式是<br>浏览器首选Chrome、Firefox、Edge，其他主流浏览器都是主动兼容这3个浏览器的；<br>安装Tampermonkey浏览器拓展，可以从 <img src="https://www.tampermonkey.net/" alt="Tampermonkey官网"> 安装；<br>安装KeepChatGPT插件，可以在<img src="https://greasyfork.org/zh-CN/scripts/462804-keepchatgpt" alt="安装渠道">安装；<br>打开 ChatGPT 尽情享用吧；<br>另外，还有一个更巧妙的方法就是问ChatGPT：如何安装tampermonkey拓展和greasyfork上的插件</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>莫唱当年长恨歌，人间亦自有星河。</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/chatgpt/"># chatgpt</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/04/23/%E5%86%9C%E6%9D%91%E4%BF%A1%E7%94%A8%E5%90%88%E4%BD%9C%E7%A4%BE%E7%9A%84%E8%B4%A6%E7%9B%AE%E9%97%AE%E9%A2%98/">农村信用合作社的账目问题</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+
+</html>
