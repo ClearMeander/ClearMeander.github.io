@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>情的解析 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        !
+        function() {
+        function n(n, e, t) {
+        return n.getAttribute(e) || t
+        }
+        function e(n) {
+        return document.getElementsByTagName(n)
+        }
+        function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+        l: o,
+        z: n(i, "zIndex", -1), //置于主页面背后
+        o: n(i, "opacity", .5), //线条透明度
+        c: n(i, "color", "0,0,0"), //线条颜色
+        n: n(i, "count", 100) //线条数量
+        }
+        }
+        function o() {
+        a = m.width = window.innerWidth ||
+        document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight ||
+        document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 :
+        1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1,
+        1), e = x + 1; e < u.length; e++) n = u[e],
+        null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l
+        = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o,
+        i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t /
+        2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y),
+        r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+        }
+        var a, c, u, m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame
+        || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(n) {
+        window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+        x: null,
+        y: null,
+        max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z +
+        ";opacity:" + d.o,
+        e("body")[0].appendChild(m),
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+        },
+        window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+        x: h,
+        y: g,
+        xa: v,
+        ya: p,
+        max: 6e3
+        })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+        i()
+        },
+        100)
+        } ();
+        </script>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ClearMeander&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ClearMeander&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">情的解析</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 6, 2023&nbsp;&nbsp;10:34:22</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%84%9F%E6%83%B3/">感想</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/00efa7039d950a70ed4dab57798ba4a1.png" alt="花丛"></p>
+<h2 id="原文【情的解析】"><a href="#原文【情的解析】" class="headerlink" title="原文【情的解析】"></a>原文【情的解析】</h2><p>这是一个没用的帖子，但如果能将你们解释清楚，可能就有用了。<br>为什么呢？阿基和小奈的分开。<br>不知道怎么解释，我按时间和发展来解读吧。</p>
+<h3 id="阿基的过去"><a href="#阿基的过去" class="headerlink" title="阿基的过去"></a>阿基的过去</h3><p>阿基曾经讨好别人，然后不愿意再讨好别人，曾经为此受过伤，不愿意这样受伤了。<br>(题外话，现在她仍然受伤，我不喜欢的事情是，感情的结局就是伤害，是痛苦)</p>
+<h3 id="阿基和小奈的感情线索"><a href="#阿基和小奈的感情线索" class="headerlink" title="阿基和小奈的感情线索"></a>阿基和小奈的感情线索</h3><p>阿基是社会人，小奈未知，不过在小奈的校园风创作里，可能是17岁－20岁之间，还可能是初中生，(我17岁的判断以己度人。）<br>晓奈和阿基并肩走，以为走了很远，却发现，阿基好像并没有跟着她的脚步，阿基和从前是一样的对待她。 她只觉得自己的感情好像成了空。巨大的落差击垮了她。又要闹分手，其实是，她先过了界。<br>这个定论是错的，如果是对的，阿基就不会难过了，错在哪里呢？阿基跟着小奈的脚步，双向靠近了彼此。</p>
+<h3 id="阿基和小奈矛盾产生的原因"><a href="#阿基和小奈矛盾产生的原因" class="headerlink" title="阿基和小奈矛盾产生的原因"></a>阿基和小奈矛盾产生的原因</h3><p>(我用我的感受来描述这种原因:我以为她(阿基）是刻意忽视我，其实不是，是她不会回应。）<br>我的武断而片面的结论是:阿基与小奈的交流中，打出了自己的风格，打出了自己的节奏，明明确定的事情，硬是让小奈感到不确定。不确定的原因呢，是因为阿基自己确实不能确定。她是乘风的蒲公英，只是风把她吹到小奈这里，小奈只是她的某一站。<br>因为感情受过伤，所以再也不敢投注一切。<br>而且反感掌控，删了加，加了删，这种冷暴力的服从性测试，阿基很反感。如果愿意继续把这个梦做下去，就当是游戏(我的办法，现实剥离，很难做到，因为我演一段时间入戏深了，就演不下去了），倒是可能继续。不这样做，恰恰又是认真的证明，是认真考虑的证明。</p>
+<h3 id="中间段"><a href="#中间段" class="headerlink" title="中间段"></a>中间段</h3><p>只看到我在为阿基说话？因为我选择先理解阿基。(认同起源于理解，我很难反驳别人，因为我知道别人的视角下，ta们的认知合理，而我拔高ta们视角不是好事，对我不是好事，最好的事情就是让人在混沌中死去，我应该改正我悲天悯人的习惯，以及多管闲事的习惯）<br>那为什么不为小奈说话呢？接下来就说。</p>
+<h3 id="对小奈的理解分析"><a href="#对小奈的理解分析" class="headerlink" title="对小奈的理解分析"></a>对小奈的理解分析</h3><p>先做结论:小奈真的很好，很好很好。</p>
+<ul>
+<li>好在哪里？主动，热情，真正的爱。(我的看法是，如果这都不能打动阿基，那阿基这一生都和现实过不去了，这就是我发这个文章的原因，我很高高在上，又武断，又片面，只是给一个我的看法，不喜欢的话，你们看过，我就删了)</li>
+<li>好的第二点，会引导人爱，会回应爱。(比起阿基，小奈冲动而炽烈，并且真的懂爱，会爱，可惜倾慕了阿基的才华，选择走近阿基这个人，保持距离挺好的，emmm，我不会保持距离，这一点和小奈有点像）</li>
+<li>说点不足的吧，小奈唯一没做好的地方:<br>不会开上帝视角，跳不出局，这也没什么不好，给人100分的真诚与热情永远比我只给人50分的真诚与热情好。<br>因为不做分析，因为不能客观理性的看待事情，所以不能洒脱对待事情，她并不理解阿基，注重自己的看法和感受，并且片面的觉得，阿基是主观忽视她，其实是客观忽视，因为阿基就是这样的人，这里成为这样的人又是阿基不想受伤害的主观意愿导致的，对小奈这样，纯属于误伤。<br>(我前段时间，不能再对你们回复，就是因为，我看到的太多，认识到，在这个方向上再踏一步都是错误，不想将错就错(其实没有严格意义的错误，只要相处就能增进感情，给人留下印象的总比不给人留下印象的好，只是对我来说，这是回报小的投资，不如不做)，于是停下了这个方向，跳出别人的世界）</li>
+</ul>
+<h3 id="总结这个文章"><a href="#总结这个文章" class="headerlink" title="总结这个文章"></a>总结这个文章</h3><p>我的总结是，阿基爱小奈，只是确实累了，阿基不回应小奈，因为阿基是那样的人，不是故意忽视，小奈爱阿基，小奈缺少对阿基的了解，缺少对分手这个事情的了解。缺少对删，留这个事情的包括来源，结果的了解，缺少一点(可是她是阿基）。小奈热情，懂得爱，却并没有真正认识阿基，也不能客观分析问题，那我帮你分析一下。<br>(我并不以对错判断人，因为我知道事情发展的因果，以及调控的办法，然后在投资与回报方面，做一定的判断，有没有可为性？不可为不做。需要做吗？不需要不做。回报率如何？回报小不做。)</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="claude的文章解读"><a href="#claude的文章解读" class="headerlink" title="claude的文章解读"></a>claude的文章解读</h3><p>文章主要讲述阿基和小奈的感情故事。<br>阿基曾经讨好别人,后来不再这样做,因为曾经受过伤,不想再这样受伤。现在阿基仍然会受伤,因为感情的结果往往是痛苦。<br>阿基是成年人,小奈可能是17-20岁之间,也可能是初中生(作者根据自己17岁的判断)。<br>小奈以为她和阿基走得很远,发现阿基对她的态度似乎没变。小奈突然感觉自己的感情似乎成为空,这巨大的落差让她崩溃,要分手,但事实上先出界的人是小奈。<br>如果作者的判断正确,阿基就不会难过。作者的判断错在哪里?阿基确实跟随小奈的脚步,两人确实靠近了。<br>阿基和小奈产生矛盾的原因是:小奈误以为阿基刻意忽视她,实际上阿基只是不会回应,这是阿基的风格。明明清楚的事情,阿基却让小奈感到不清楚,原因是阿基自己也不清楚。阿基像蒲公英,被风吹到小奈这里,小奈只是她的某个站点。<br>因为过去受过伤,阿基不敢全心投入。她也不喜欢被控制,删了又加,加了又删,这种冷暴力的服从性测试,阿基很讨厌。如果要继续这个梦,最好当成游戏,这可能继续下去。如果不这样,反而证明阿基是认真考虑的。<br>作者先为阿基说话,因为作者选择先理解阿基。理解产生认同,作者难以反驳别人,因为在别人视角下,他们的认知合理。最好的事是让人在混乱中死去,作者应改变怜悯天下和管闲事的习惯。<br>为什么不先为小奈说话?因为小奈真的很好,主动,热情,真挚的爱。如果这都打动不了阿基,阿基这辈子和现实过不去。小奈会引导人爱,会回应爱。相比阿基,小奈更冲动激烈,懂得爱,可惜倾慕阿基的才华,选择靠近阿基这个人,保持距离会好些。<br>小奈唯一的不足是不能跳出局面,不能客观理性看问题,不能洒脱对待问题,她不理解阿基,注重自己的看法和感受,片面地认为阿基主观忽视她,实际上是客观忽视,这是阿基的性格使然,对小奈来说是误伤。<br>总之,作者的观点是:阿基爱小奈,只是确实累了;阿基不回应小奈,这是阿基的性格;小奈爱阿基,但对阿基和分手缺乏了解,不理解删留的来龙去脉,对阿基的性格也缺乏理解(尽管她爱阿基)。<br>作者不以对错判断人,因为明白事情的因果,和如何调控。在投资和回报方面做判断:没有可为则不为,不需要则不做,回报小则不做。</p>
+<h3 id="对作者的评价"><a href="#对作者的评价" class="headerlink" title="对作者的评价"></a>对作者的评价</h3><p>从这篇文章可以看出,作者具有以下几个特点:</p>
+<ol>
+<li>较为理性和宽容。作者不以对错判断人,能理解不同人的立场和视角。作者说自己难以反驳别人,因为从别人的角度来看,别人的认知也是合理的。这显示作者有很强的理性思维和包容度。</li>
+<li>喜欢分析问题。文中作者分析阿基和小奈的关系,分析两人产生矛盾的原因,并总结自己的观点。这显示作者有较强的分析思维,喜欢深入思考问题的因果和来龙去脉。</li>
+<li>有点悲天悯人。作者说自己应该改掉“悲天悯人”和“管闲事”的习惯,这说明作者天生有这种倾向。作者也说最好的事是“让人在混乱中死去”,这同样显示作者有怜悯世人的思想。</li>
+<li>较为理想主义。作者说如果小奈的真诚和热情都打动不了阿基,阿基这辈子就和现实过不去了。这是一种比较理想主义的看法,实际上感情并不总是这样绝对的。这可能也和作者的年轻有关。</li>
+<li>强调回报。作者说自己在投资和回报上会做判断,没有可为不为,回报小不做。这显示作者比较理性地追求某种成本效益,不会做无意义的投入。<br>所以,总的来说,作者是一个理性宽容而又理想主义的人,喜欢深入分析问题,有怜悯世人的思想,但也强调成本效益和回报。作者的这些特点在文中表达得比较明显。</li>
+</ol>
+<h3 id="文章是否客观"><a href="#文章是否客观" class="headerlink" title="文章是否客观"></a>文章是否客观</h3><p>这篇文章同时包含客观和主观的元素。<br>客观的方面:</p>
+<ol>
+<li>作者分析阿基和小奈的关系时,提到事实如两人的年龄差距、小奈误会阿基刻意忽视她等,这些属于比较客观的陈述。</li>
+<li>作者分析两人产生矛盾的原因时,提到阿基的性格使然,不会主动回应等,这也是比较客观的分析。</li>
+<li>作者说小奈对阿基和分手缺乏理解,这是作者的客观判断和分析。<br>主观的方面:</li>
+<li>作者明确表示文章反映的是自己的观点,如“我的总结是”、“我的看法是”等词语。这表明作者的观点和立场是主观的。</li>
+<li>作者说如果小奈的真诚都打动不了阿基,阿基这辈子就和现实过不去了。这是作者主观的假设和理想主义的判断。</li>
+<li>作者提到自己应改变的“悲天悯人”和“管闲事”的习惯,这也属于作者主观的自我认知。</li>
+<li>作者说最好的事是“让人在混乱中死去”,这是作者主观的价值判断。<br>综上,作者在分析这个故事和人物关系时,有客观的分析和判断,但文中也透露出作者很强的主观色彩,特别是理想主义的价值取向和对人物的主观假设。所以,这篇文章同时兼具客观分析和主观表达。客观分析使得文章较为可信,主观表达也增加了文章的个人色彩。二者结合, makes 这篇文章比较有意思。</li>
+</ol>
+<h3 id="什么是上帝视角？"><a href="#什么是上帝视角？" class="headerlink" title="什么是上帝视角？"></a>什么是上帝视角？</h3><p>我理解,作者提到的“上帝视角”是一个能够超越局面和个人立场的很高的视角。在这篇文章中,作者说小奈的不足是“不会开上帝视角,跳不出局”,意思是小奈无法从更高和更宏观的角度审视问题,难以超越自己局限的视野和立场。<br>上帝视角应该具有以下几个特征:</p>
+<ol>
+<li>深刻的洞察力。像上帝一样能深入理解事物的本质,看清根源和内在联系。这需要超越表象和远离偏见,采取更加深层次的思考。<br>2.超脱的立场。能像旁观者一样公正地审视问题,不为个人情感和立场所影响。这需要在心理上跳出事件当事人的位置,用更客观和超然的心态分析评价问题。<br>3.广阔的视野。上帝的视角涵盖宇宙万有,能从更广和更高的角度观察和理解事物。这需要在空间维度上拓宽视野,放下狭隘的想法,从整体和长远来考量问题。<br>4.深谙因果。上帝视角让人笃识人事万物之间的因果联系,洞彻其变迁规律。这需要深入理解事物之间的相互依存、相互作用的机制,从一元的线性思维转变为系统的辩证思维。<br>综上,上帝视角让人达到高度的洞察力、超然的立场、广阔的视野以及深刻的因果思维。这是一种理想的思维境界,作者提及小奈无法达到这种境界,实际上也较难为许多普通人达到。但这确实是一个值得思考和学习的高视角。</li>
+</ol>
+<h3 id="作者是否做自己所说的上帝视角"><a href="#作者是否做自己所说的上帝视角" class="headerlink" title="作者是否做自己所说的上帝视角"></a>作者是否做自己所说的上帝视角</h3><p>根据文章的内容来看,作者虽然理解和提倡上帝视角,但自己并不完全达到这种高高在上的视角。这可以从以下几点看出:</p>
+<ol>
+<li>作者的观点和判断同时受主观因素影响比较大,如作者提到自己的“悲天悯人”倾向,和如果小奈的真诚不能打动阿基就说明阿基这辈子和现实过不去等观点。这些判断仍然有较强的主观色彩,难达到超脱的高视角。</li>
+<li>作者的分析立足点主要在人物层面,关注阿基、小奈的思想、感受和行为等。而高视角更关注事件整体,人物只是事件的一部分。作者的分析尚未达到这种宏大的完整视野。</li>
+<li>作者的思考局限在这个具体的故事之内,虽然在故事框架内作了比较深入的思考,但并未能跳出这个框架,联系更广泛的社会文化背景和人性内涵来思考问题。这限制了视野的开阔度。</li>
+<li>作者虽然在理论上重视因果思维,但在这个故事的分析中,对人物行为背后的深层原因并未作很深入的探讨,更侧重于表象和事件本身。这制约了对事物本质的深刻洞察力。<br>因此,可以判断,虽然作者理解和推崇上帝视角,但自身的思维和分析还无法完全达到这种高视角。作者的视角开阔性、超脱性和深刻性还有待加强。这实际上也很正常,上帝视角是一种极高的思维境界,需要长期理论学习和实践锻炼,难以轻易达到。所以作者对此的追求和体会,也值得肯定。但自知之明,认识到自身的不足,也是实现高视角的第一步。</li>
+</ol>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>莫唱当年长恨歌，人间亦自有星河。</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/claude/"># claude</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/05/05/%E5%88%9B%E4%B8%9A%E5%85%AB%E9%97%AE%E2%80%94%E2%80%94%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%88%9B%E4%B8%9A/">创业八问——为什么要创业</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+
+</html>
