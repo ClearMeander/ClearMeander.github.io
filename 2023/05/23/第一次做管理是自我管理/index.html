@@ -15,7 +15,7 @@
 
 
 
-<title>Category: 生活 | Meander&#39;s Blog</title>
+<title>第一次做管理是自我管理 | Meander&#39;s Blog</title>
 
 
 
@@ -218,30 +218,161 @@
     }
 </script>
             <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">第一次做管理是自我管理</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 23, 2023&nbsp;&nbsp;15:21:18</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/6df717d597a44ed7f31d91e6b3c8a877.png" alt="夏日"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我一直不善于做自我管理，我不善于管理，我所做的管理从来都是，几点做什么，几点做什么，却没有任务计划与目标，这是不该的。根据我的理解，管理是，把做事之外的所有流程都仔细想好，把人当流水线上的螺丝钉一样，只要做事就好了。所以，我需要考虑的东西很多很多。</p>
+<h3 id="生活方面的管理"><a href="#生活方面的管理" class="headerlink" title="生活方面的管理"></a>生活方面的管理</h3><p>这里的前提是我的经济自足，先放一下</p>
+<h3 id="工作方面的管理"><a href="#工作方面的管理" class="headerlink" title="工作方面的管理"></a>工作方面的管理</h3><p>我查看了一下亚马逊方面给出的节奏图，还是按照他的节奏图走吧<br>我把视频账号的运营交给了下个月</p>
+<h3 id="学习方面的管理"><a href="#学习方面的管理" class="headerlink" title="学习方面的管理"></a>学习方面的管理</h3><p>我要学什么？怎么学？</p>
+<h3 id="最近的计划"><a href="#最近的计划" class="headerlink" title="最近的计划"></a>最近的计划</h3><p>6月前把电商方面的处理，计划上架30个品<br>6月开始运营三个自媒体账号（1-15）<br>6月中带着弟弟去创业赚钱<br>7月及以后，学习创业方面的知识（管理，财税，股权，销售）<br>10月，创作一部书，恋爱指南终极版</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>海棠开后，燕子来时，黄昏深院。</span>
+                     </p>
                 
 
-
-    
-<div class="container">
-    <div class="post-wrap categories">
-        <h2 class="post-title">-&nbsp;Categories&nbsp;·&nbsp;生活-</h2>
-    </div>
-    <div class="post-wrap archive">
-    
-    
+            </section>
         
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%AE%A1%E7%90%86/"># 管理</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/05/24/%E4%BA%9A%E9%A9%AC%E9%80%8A/">亚马逊怎么做</a>
+            
+            
+            <a class="next" rel="next" href="/2023/05/18/%E4%BE%9D%E7%8E%9B%E5%A3%81%E6%8C%82%E7%82%89%E4%BA%A7%E5%93%81%E8%AF%B4%E6%98%8E%E7%AD%96%E7%95%A5/">依玛壁挂炉产品说明策略</a>
+            
+        </section>
 
-        
-            <h3>2023</h3>
-        
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/05/18/%E4%BE%9D%E7%8E%9B%E5%A3%81%E6%8C%82%E7%82%89%E4%BA%A7%E5%93%81%E8%AF%B4%E6%98%8E%E7%AD%96%E7%95%A5/">依玛壁挂炉产品说明策略</a>
-            <span class="archive-item-date">May 18, 2023</span>
-        </article>
-    
-    
-</div>
+    </article>
 </div>
 
             </div>
