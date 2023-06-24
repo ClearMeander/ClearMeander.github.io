@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>麦肯锡信息获取方法 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        !
+        function() {
+        function n(n, e, t) {
+        return n.getAttribute(e) || t
+        }
+        function e(n) {
+        return document.getElementsByTagName(n)
+        }
+        function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+        l: o,
+        z: n(i, "zIndex", -1), //置于主页面背后
+        o: n(i, "opacity", .5), //线条透明度
+        c: n(i, "color", "0,0,0"), //线条颜色
+        n: n(i, "count", 100) //线条数量
+        }
+        }
+        function o() {
+        a = m.width = window.innerWidth ||
+        document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight ||
+        document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 :
+        1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1,
+        1), e = x + 1; e < u.length; e++) n = u[e],
+        null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l
+        = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o,
+        i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t /
+        2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y),
+        r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+        }
+        var a, c, u, m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame
+        || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(n) {
+        window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+        x: null,
+        y: null,
+        max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z +
+        ";opacity:" + d.o,
+        e("body")[0].appendChild(m),
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+        },
+        window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+        x: h,
+        y: g,
+        xa: v,
+        ya: p,
+        max: 6e3
+        })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+        i()
+        },
+        100)
+        } ();
+        </script>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ClearMeander&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ClearMeander&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">麦肯锡信息获取方法</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 16, 2023&nbsp;&nbsp;11:14:04</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/6df717d597a44ed7f31d91e6b3c8a877.png" alt="夏日"></p>
+<h2 id="麦肯锡法"><a href="#麦肯锡法" class="headerlink" title="麦肯锡法"></a>麦肯锡法</h2><h3 id="麦肯锡是什么？"><a href="#麦肯锡是什么？" class="headerlink" title="麦肯锡是什么？"></a>麦肯锡是什么？</h3><p>麦肯锡是一家全球领先的管理咨询公司，为各行各业的客户提供战略、组织、运营、数字化、创新等方面的咨询服务。</p>
+<h3 id="麦肯锡关键词法是什么？"><a href="#麦肯锡关键词法是什么？" class="headerlink" title="麦肯锡关键词法是什么？"></a>麦肯锡关键词法是什么？</h3><p>麦肯锡的关键词有很多，根据不同的领域和目的，可以有不同的分类方法。一种常见的方法是使用麦肯锡的方法论来研究一个行业或领域，通过列出一些关键字和短语来获取相关信息和洞见。</p>
+<h3 id="麦肯锡关键词法怎么做？"><a href="#麦肯锡关键词法怎么做？" class="headerlink" title="麦肯锡关键词法怎么做？"></a>麦肯锡关键词法怎么做？</h3><p>麦肯锡关键词法的主要内容可以概括为以下七个步骤：</p>
+<ul>
+<li><strong>定义研究范围</strong>：确定要研究的行业或领域、地理范围和时间范围。</li>
+<li><strong>收集资料</strong>：收集相关资料，包括行业报告、市场研究、新闻文章和公开资料等。</li>
+<li><strong>关键字设计</strong>：根据研究目的和收集到的资料，设计一定数量（通常为100个）的关键字和短语。</li>
+<li><strong>按关键字进行分析</strong>：使用关键字来分析资料，并把资料归纳到相关的关键字下。</li>
+<li><strong>评估趋势</strong>：对每个关键字的分析结果进行评估，确定趋势和行业发展的方向。</li>
+<li><strong>制定策略</strong>：根据趋势和发展方向，制定相应的策略和建议。</li>
+<li><strong>呈现结果</strong>：将分析结果和策略建议以适当的形式呈现给目标受众，如报告、演示、图表等。</li>
+</ul>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="以了解fgo为例子，运用麦肯锡关键词法。"><a href="#以了解fgo为例子，运用麦肯锡关键词法。" class="headerlink" title="以了解fgo为例子，运用麦肯锡关键词法。"></a>以了解fgo为例子，运用麦肯锡关键词法。</h3><ul>
+<li>研究范围</li>
+<li>收集资料<ul>
+<li>收集资料的方法&#x2F;渠道<ul>
+<li>fgo相关贴吧</li>
+<li>bilibili攻略</li>
+<li>fgowiki</li>
+<li>微信小程序，fgo素材规划</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关键字设计<ul>
+<li>初步的混沌的关键字，通过ai完成<br>你知道麦肯锡的快速了解行业方法吗？就是通过大量行业高频关键词来建立概念。现在我是一个对命运-冠位指定这个游戏不了解的小白，请你给我整理出30个常用关键词，制作成Markdown表格，表头是：关键词（中文）、分类（中文）、介绍（限50字）。<br>我知道麦肯锡的快速了解行业方法，就是通过大量行业高频关键词来建立概念。《命运-冠位指定》是一款由TYPE-MOON发行的角色扮演类手机游戏，基于Fate系列的世界观和设定，讲述了玩家作为“指定召唤师”与从者一起穿越各个历史时代，拯救人类未来的故事¹²³。这款游戏有很多常用的关键词，我为你整理了30个，制作成了Markdown表格，如下：</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">关键词（中文）</th>
+<th align="center">分类（中文）</th>
+<th align="center">介绍（限50字）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">指定召唤师</td>
+<td align="center">角色</td>
+<td align="center">玩家扮演的主角，拥有召唤从者的能力，被卡尔德亚安全组织选中参与圣杯战线计划</td>
+</tr>
+<tr>
+<td align="center">从者</td>
+<td align="center">角色</td>
+<td align="center">被指定召唤师召唤出来的英灵，具有各自的职阶、技能和宝具，与玩家一起战斗</td>
+</tr>
+<tr>
+<td align="center">魔术协会</td>
+<td align="center">组织</td>
+<td align="center">管理和保护魔术的秘密组织，拥有三大部门：时钟塔、亚特兰大和远东</td>
+</tr>
+<tr>
+<td align="center">卡尔德亚安全组织</td>
+<td align="center">组织</td>
+<td align="center">一个位于雪山中的神秘机构，拥有观测人类历史的能力，发现了人类未来将在2017年消失的危机</td>
+</tr>
+<tr>
+<td align="center">圣杯战线计划</td>
+<td align="center">事件</td>
+<td align="center">卡尔德亚安全组织为了拯救人类未来而发起的计划，目的是修复被扭曲的历史奇点</td>
+</tr>
+<tr>
+<td align="center">历史奇点</td>
+<td align="center">概念</td>
+<td align="center">人类历史上出现的异常现象，导致历史发生变化，威胁到人类未来的存在</td>
+</tr>
+<tr>
+<td align="center">雷神之锤</td>
+<td align="center">装备</td>
+<td align="center">卡尔德亚安全组织使用的特殊飞船，可以穿越时空，将指定召唤师和从者送往各个历史奇点</td>
+</tr>
+<tr>
+<td align="center">魔力转移装置</td>
+<td align="center">装备</td>
+<td align="center">指定召唤师使用的特殊装置，可以将魔力转移给从者，增强他们的战斗力</td>
+</tr>
+<tr>
+<td align="center">圣晶石</td>
+<td align="center">物品</td>
+<td align="center">一种珍贵的魔力结晶，可以用来进行从者召唤或恢复体力</td>
+</tr>
+<tr>
+<td align="center">友情点数</td>
+<td align="center">物品</td>
+<td align="center">一种通过与其他玩家互助获得的点数，可以用来进行友情点数召唤</td>
+</tr>
+<tr>
+<td align="center">友情点数召唤</td>
+<td align="center">操作</td>
+<td align="center">一种消耗友情点数进行的从者或礼装召唤，只能获得1-3星级的从者或礼装</td>
+</tr>
+<tr>
+<td align="center">圣晶石召唤</td>
+<td align="center">操作</td>
+<td align="center">一种消耗圣晶石进行的从者或礼装召唤，可以获得3-5星级的从者或礼装</td>
+</tr>
+<tr>
+<td align="center">礼装</td>
+<td align="center">物品</td>
+<td align="center">一种可以给从者穿戴的物品，具有各种效果，分为1-5星级</td>
+</tr>
+<tr>
+<td align="center">宝具</td>
+<td align="center">技能</td>
+<td align="center">从者的终极技能，可以造成大量伤害或产生其他效果，分为1-5级</td>
+</tr>
+<tr>
+<td align="center">技能强化</td>
+<td align="center">操作</td>
+<td align="center">一种消耗材料和QP来提升从者技能等级的操作，可以增强技能效果和缩短冷却时间</td>
+</tr>
+<tr>
+<td align="center">灵基再临</td>
+<td align="center">操作</td>
+<td align="center">一种消耗材料和QP来提升从者等级上限的操作，可以增加从者的属性和改变外观</td>
+</tr>
+<tr>
+<td align="center">QP</td>
+<td align="center">物品</td>
+<td align="center">一种游戏中的通用货币，可以用来进行从者的强化或技能强化</td>
+</tr>
+<tr>
+<td align="center">经验卡</td>
+<td align="center">物品</td>
+<td align="center">一种可以给从者提供经验值的物品，分为1-5星级，不同职阶和颜色</td>
+</tr>
+<tr>
+<td align="center">灵基质量</td>
+<td align="center">概念</td>
+<td align="center">从者的稀有度，分为1-5星级，影响从者的初始属性和成长曲线</td>
+</tr>
+<tr>
+<td align="center">职阶</td>
+<td align="center">概念</td>
+<td align="center">从者的分类，有剑、弓、枪、骑、术、杀、狂、盾、裁、月、降、外等，影响从者的特性和相克关系</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">概念</td>
+<td align="center">从者或敌人的特殊标签，如人型、神性、龙、骑乘等，影响一些技能或宝具的效果</td>
+</tr>
+<tr>
+<td align="center">相克</td>
+<td align="center">概念</td>
+<td align="center">职阶之间的克制关系，如剑克枪、枪克骑、骑克剑等，影响伤害的加成或减免</td>
+</tr>
+<tr>
+<td align="center">指令纹章</td>
+<td align="center">物品</td>
+<td align="center">一种可以强制从者行动的物品，每天恢复一枚，最多可以储存三枚</td>
+</tr>
+<tr>
+<td align="center">指令卡</td>
+<td align="center">概念</td>
+<td align="center">从者在战斗中使用的卡牌，分为破击、速击和强击三种类型，影响攻击次数和伤害</td>
+</tr>
+<tr>
+<td align="center">指令卡连击</td>
+<td align="center">概念</td>
+<td align="center">在战斗中连续使用同一从者或同一类型的指令卡，可以产生额外的效果，如伤害加成或星星掉落</td>
+</tr>
+<tr>
+<td align="center">宝具卡</td>
+<td align="center">概念</td>
+<td align="center">从者在战斗中使用宝具的卡牌，有红色、蓝色和绿色三种颜色，影响宝具的威力和连击效果</td>
+</tr>
+<tr>
+<td align="center">暴击星</td>
+<td align="center">物品</td>
+<td align="center">在战斗中掉落的小星星，可以提高下一回合指令卡的暴击率，暴击可以造成更高的伤害</td>
+</tr>
+<tr>
+<td align="center">NP槽</td>
+<td align="center">概念</td>
+<td align="center">从者使用宝具所需的能量槽，可以通过攻击或被攻击来积累，满100%后可以使用宝具</td>
+</tr>
+<tr>
+<td align="center">助战从者</td>
+<td align="center">角色</td>
+<td align="center">在战斗中可以借用的其他玩家的从者，可以获得友情点数作为奖励</td>
+</tr>
+<tr>
+<td align="center">主线任务</td>
+<td align="center">任务</td>
+<td align="center">游戏中围绕历史奇点展开的主要剧情任务，分为第一部和第二部两个阶段</td>
+</tr>
+</tbody></table>
+<ul>
+<li>混沌关键字很麻烦，并不能够让你直接了解玩法，它涉及到游戏背景，游戏设定。所以当你想要详细了解fgo，必须要精确关键词方向。现在限制一下方向到哪里呢？<br>  大家最想了解的痛点，就是，怎么玩算是对的？怎么玩是最轻松的？其它的都不相关。所以限制玩法类关键词，再提取一下。<br>  我知道麦肯锡的快速了解行业方法，就是通过大量行业高频关键词来建立概念。《命运-冠位指定》是一款由TYPE-MOON发行的角色扮演类手机游戏，基于Fate系列的世界观和设定，讲述了玩家作为“指定召唤师”与从者一起穿越各个历史时代，拯救人类未来的故事¹²。这款游戏有很多高端玩家的技巧和心得，我为你整理了30个常用关键词，制作成了Markdown表格，如下：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">关键词（中文）</th>
+<th align="center">分类（中文）</th>
+<th align="center">介绍（限50字）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">石头号</td>
+<td align="center">概念</td>
+<td align="center">一种通过长期签到或者购买而获得大量圣晶石的账号，可以用来抽取想要的从者或礼装</td>
+</tr>
+<tr>
+<td align="center">拐</td>
+<td align="center">操作</td>
+<td align="center">一种借用其他玩家的助战从者来完成任务的方法，通常需要提前在社交平台上联系好</td>
+</tr>
+<tr>
+<td align="center">友情点刷种火</td>
+<td align="center">操作</td>
+<td align="center">一种使用友情点数召唤出经验卡来给从者升级的方法，比较节省体力和时间</td>
+</tr>
+<tr>
+<td align="center">金方块换什么</td>
+<td align="center">问题</td>
+<td align="center">一种常见的新手疑问，金方块是一种稀有的兑换物品，可以换取各种材料或礼装，一般建议换取2030碎片或黑圣杯</td>
+</tr>
+<tr>
+<td align="center">绿卡队</td>
+<td align="center">概念</td>
+<td align="center">一种以速击卡为主要攻击方式的队伍，通常需要有斯卡哈·斯卡蒂这样的辅助从者来提供绿卡加成和宝具充能</td>
+</tr>
+<tr>
+<td align="center">CBA</td>
+<td align="center">缩写</td>
+<td align="center">斯卡哈·斯卡蒂的简称，因为她的名字在日语中发音为Sukasaha Sukadi</td>
+</tr>
+<tr>
+<td align="center">哈哈哈</td>
+<td align="center">缩写</td>
+<td align="center">基督山伯爵的简称，因为他的宝具在日语中发音为Hahahahaha</td>
+</tr>
+<tr>
+<td align="center">B长江</td>
+<td align="center">缩写</td>
+<td align="center">狂阶兰斯洛特的简称，因为他的宝具在日语中发音为Bāsakā Chōsen</td>
+</tr>
+<tr>
+<td align="center">宝石翁</td>
+<td align="center">昵称</td>
+<td align="center">爱因斯坦伯爵的昵称，因为他的外貌和喜好</td>
+</tr>
+<tr>
+<td align="center">2030碎片</td>
+<td align="center">物品</td>
+<td align="center">一种5星级礼装，可以每回合提供8个暴击星，对于提高暴击率和伤害有很大帮助</td>
+</tr>
+<tr>
+<td align="center">黑圣杯</td>
+<td align="center">物品</td>
+<td align="center">一种5星级礼装，可以提高从者的攻击力和宝具威力，但也会每回合扣除从者的生命值</td>
+</tr>
+<tr>
+<td align="center">QP</td>
+<td align="center">物品</td>
+<td align="center">一种游戏中的通用货币，可以用来进行从者的强化或技能强化</td>
+</tr>
+<tr>
+<td align="center">经验卡</td>
+<td align="center">物品</td>
+<td align="center">一种可以给从者提供经验值的物品，分为1-5星级，不同职阶和颜色</td>
+</tr>
+<tr>
+<td align="center">灵基质量</td>
+<td align="center">概念</td>
+<td align="center">从者的稀有度，分为1-5星级，影响从者的初始属性和成长曲线</td>
+</tr>
+<tr>
+<td align="center">职阶</td>
+<td align="center">概念</td>
+<td align="center">从者的分类，有剑、弓、枪、骑、术、杀、狂、盾、裁、月、降、外等，影响从者的特性和相克关系</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">概念</td>
+<td align="center">从者或敌人的特殊标签，如人型、神性、龙、骑乘等，影响一些技能或宝具的效果</td>
+</tr>
+<tr>
+<td align="center">相克</td>
+<td align="center">概念</td>
+<td align="center">职阶之间的克制关系，如剑克枪、枪克骑、骑克剑等，影响伤害的加成或减免</td>
+</tr>
+<tr>
+<td align="center">指令纹章</td>
+<td align="center">物品</td>
+<td align="center">一种可以强制从者行动的物品，每天恢复一枚，最多可以储存三枚</td>
+</tr>
+<tr>
+<td align="center">指令卡</td>
+<td align="center">概念</td>
+<td align="center">从者在战斗中使用的卡牌，分为破击、速击和强击三种类型，影响攻击次数和伤害</td>
+</tr>
+<tr>
+<td align="center">指令卡连击</td>
+<td align="center">概念</td>
+<td align="center">在战斗中连续使用同一从者或同一类型的指令卡，可以产生额外的效果，如伤害加成或星星掉落</td>
+</tr>
+<tr>
+<td align="center">宝具卡</td>
+<td align="center">概念</td>
+<td align="center">从者在战斗中使用宝具的卡牌，有红色、蓝色和绿色三种颜色，影响宝具的威力和连击效果</td>
+</tr>
+<tr>
+<td align="center">暴击星</td>
+<td align="center">物品</td>
+<td align="center">在战斗中掉落的小星星，可以提高下一回合指令卡的暴击率，暴击可以造成更高的伤害</td>
+</tr>
+<tr>
+<td align="center">NP槽</td>
+<td align="center">概念</td>
+<td align="center">从者使用宝具所需的能量槽，可以通过攻击或被攻击来积累，满100%后可以使用宝具</td>
+</tr>
+<tr>
+<td align="center">助战从者</td>
+<td align="center">角色</td>
+<td align="center">在战斗中可以借用的其他玩家的从者，可以获得友情点数作为奖励</td>
+</tr>
+<tr>
+<td align="center">主线任务</td>
+<td align="center">任务</td>
+<td align="center">游戏中围绕历史奇点展开的主要剧情任务，分为第一部和第二部两个阶段</td>
+</tr>
+<tr>
+<td align="center">副本任务</td>
+<td align="center">任务</td>
+<td align="center">游戏中提供各种材料和经验卡的日常任务，每天会有不同的职阶和类型</td>
+</tr>
+<tr>
+<td align="center">活动任务</td>
+<td align="center">任务</td>
+<td align="center">游戏中不定期举办的限时任务，通常会有新的剧情、从者和礼装，以及各种奖励</td>
+</tr>
+<tr>
+<td align="center">技能强化</td>
+<td align="center">操作</td>
+<td align="center">一种消耗材料和QP来提升从者技能等级的操作，可以增强技能效果和缩短冷却时间</td>
+</tr>
+<tr>
+<td align="center">灵基再临</td>
+<td align="center">操作</td>
+<td align="center">一种消耗材料和QP来提升从者等级上限的操作，可以增加从者的属性和改变外观</td>
+</tr>
+<tr>
+<td align="center">宝具强化</td>
+<td align="center">操作</td>
+<td align="center">一种消耗同名从者来提升从者宝具等级的操作，可以增加宝具威力或效果</td>
+</tr>
+</tbody></table>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>海棠开后，燕子来时，黄昏深院。</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/24/%E6%88%91%E6%88%90%E4%B8%BA%E4%BA%86%E5%BC%82%E7%95%8C%E5%A4%A9%E9%81%93/">我成为了异界天道（一）（二）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/08/%E6%8A%BD%E5%8D%A1%E6%B8%B8%E6%88%8F%E7%9A%84%E7%AD%96%E5%88%92%E9%80%BB%E8%BE%91/">抽卡游戏的策划逻辑</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+
+</html>

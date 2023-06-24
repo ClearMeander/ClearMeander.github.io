@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>我成为了异界天道（一）（二） | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        !
+        function() {
+        function n(n, e, t) {
+        return n.getAttribute(e) || t
+        }
+        function e(n) {
+        return document.getElementsByTagName(n)
+        }
+        function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+        l: o,
+        z: n(i, "zIndex", -1), //置于主页面背后
+        o: n(i, "opacity", .5), //线条透明度
+        c: n(i, "color", "0,0,0"), //线条颜色
+        n: n(i, "count", 100) //线条数量
+        }
+        }
+        function o() {
+        a = m.width = window.innerWidth ||
+        document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight ||
+        document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 :
+        1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1,
+        1), e = x + 1; e < u.length; e++) n = u[e],
+        null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l
+        = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o,
+        i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t /
+        2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y),
+        r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+        }
+        var a, c, u, m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame
+        || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(n) {
+        window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+        x: null,
+        y: null,
+        max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z +
+        ";opacity:" + d.o,
+        e("body")[0].appendChild(m),
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+        },
+        window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+        x: h,
+        y: g,
+        xa: v,
+        ya: p,
+        max: 6e3
+        })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+        i()
+        },
+        100)
+        } ();
+        </script>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ClearMeander&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ClearMeander&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">我成为了异界天道（一）（二）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 24, 2023&nbsp;&nbsp;21:16:46</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%88%9B%E4%BD%9C/">创作</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/00efa7039d950a70ed4dab57798ba4a1.png" alt="花丛"></p>
+<h2 id="原文-第一章-唤天谷"><a href="#原文-第一章-唤天谷" class="headerlink" title="原文 第一章 唤天谷"></a>原文 第一章 唤天谷</h2><p>好一个大自然的鬼斧神工！好一番气派的景象！绝云，绝美，绝寂！此地名唤天谷，乃是东天七十二星域占星衍道之最，天衍星君的核心道场。</p>
+<p>此间种种，无一不显道蕴，无一不合天道。凡所生长之物，跃动之物，光尘云气，清露韫叶，欣欣向荣而不野蛮，鸣和以成天音。所有蛇鼠，所有鸟虫，各司其职，众生各有所乐也。此地风调雨顺，晦明变化，皆有天数。巧夺天工，是世间罕有之大美。</p>
+<p>这就是唤天谷，所谓一饮一啄，虽顺本意，又合天数。所有活物，死物们，共同构建了这样无与伦比的美好与和谐的自然之阵。这样的阵，若有人来，也是阵的一部分了。一舞一歌，一动一静，皆会与天相合，此地之物们，也会自然调整。这是永远变化，却又永不破碎之美。</p>
+<p>唤天谷虽然是天衍星君的道场，却是天道借天衍之手所布置。</p>
+<p>天衍星君5岁时，便展露可感天人之资。从此，所作所为自然而合大道。其心性悟性根骨福缘皆可称之为最。见悲而不丧，见喜则喜，知苦不畏苦，更有悲天悯人，而福惠苍生之意。善人见之益善，恶人见之而善。与之有缘者，皆会向好。</p>
+<p>这样的天衍星君，历时千年，又赶上了天时，与友人组建东天七十二星域天庭，又拒绝成为天庭之主，说自己才疏学浅，身微言轻，只能当七十二星宫天衍宫宫主，而东天天庭共主之位便这样空下了。</p>
+<p>而后，各个星君各司其职，各自为政。</p>
+<p>这唤天谷却是天衍星君百忙之中，亲力亲为，设计的道场。对外说是道场，实际却另有玄机。这是集一个星域之力推演，以一个星域为基，布下的天道大阵的核心。</p>
+<p>此地的特殊，虽然应时而变，算力强大，可以说包容万物万象，但是并不对外开放。</p>
+<p>这里的动静和谐的功能，只是表象之一。实际上，另有大用处。</p>
+<p>这是唤天之用。</p>
+<p>说不上谁成就谁，说不上谁先有意识，说不上谁算计谁，这也是事物发展的自然规律之一吧，先有鸡还是先有蛋呢？只是进化的步骤徒然的加速，只是进化最后落到了个体上。</p>
+<p>这是天衍星君，召集这方宇宙，聚集宇宙的意识做的大阵。天道本来只有法则，本来只是运行的规则，天衍星君却想唤出宇宙的意识，让它具有欲望。</p>
+<p>他并不知道做此次唤醒是自己的愿望是宇宙的愿望。天衍星君的愿望其实是让宇宙在运动中永恒。这是他违反宇宙法则的第二次行为。或者这叫第一个想法。</p>
+<p>所谓故有无相生，难易相成，长短相较，高下相倾，音声相和，前后相随。有错才有对，哪有一次性一直对的事情？可他的存在，他创造的这个大阵，就是打破这个法则的。</p>
+<p>他的那个想法，也是反法则的，宇宙从虚空中诞生，又在虚空中死亡，不断运动与变化。天衍星君竟然想打破这一点。</p>
+<p>当然也可以辩证的看待，因为有无数生灵之错，才有了他的绝对的对。</p>
+<p>可是哪种训练出来的对，都有训练的痕迹，他的对，是谁有训练的痕迹呢？是天道。</p>
+<p>天衍星君是天道完美的产品。</p>
+<p>天衍星君的创作的大阵，也是天道的完美的产品，天衍星君的一切行为，都是天道完美的产品，天衍星君就是天道完美的工具。</p>
+<p>天衍星君想明白了一切，却也不会苦笑，或者怨言，他清楚的知道一切，也知道自己的使命，他必须这样做。</p>
+<p>这才是唤天谷。</p>
+<h2 id="重置版-第一章-唤天谷"><a href="#重置版-第一章-唤天谷" class="headerlink" title="重置版 第一章 唤天谷"></a>重置版 第一章 唤天谷</h2><p>第一章 唤天谷</p>
+<p>唤天谷，东天七十二星域之最高道场，天衍星君之修炼之所。此地名为唤天谷者，因其能与天道相通，感应天机。</p>
+<p>唤天谷之景色如梦如幻，云雾缭绕，美不胜收。此地之一草一木、一山一水、一风一雨、一日一月、一星一辰，皆蕴含着深厚之道法。此地之生灵，或飞或走、或花或草、或鸟或兽、或虫或鱼，皆和谐共生，相互呼应。此地之风雨雷电、日月星辰、阴阳五行，皆遵循着自然之规律，变化无穷。此地乃大自然之杰作，天道之恩赐。</p>
+<p>唤天谷虽为天衍星君之道场，却非其亲手所布置。乃天道借其之手，为其而造。</p>
+<p>天衍星君自幼便有感天人之资，其所做所为皆符合大道。其心性纯净，悟性高超，根骨强健，福缘无量。其慈悲喜舍，智慧无边，能救苍生于水火之中。其仁义礼智信，品德高尚，能感动善人恶人。其与世无争，随缘自在，能成就自己众生。</p>
+<p>此等天衍星君，在千年前与友人共建东天七十二星域天庭，并担任天衍宫宫主。本可成为东天之主，却谦虚推辞。于是东天之主之位空缺至今。</p>
+<p>而后，各星君各司其职，各自为政。</p>
+<p>唤天谷则是天衍星君百忙之中，亲力亲为打造之道场。对外言此地只是修炼之地，实则另有玄机。此地乃以一星域为基础，以日月星辰为阵眼，以唤醒天道意识为目的之大阵核心。</p>
+<p>唤天谷虽包容万物万象，并随时变化应对外界干扰，但不对外开放。</p>
+<p>唤天谷只有一功能。</p>
+<p>那就是唤天。</p>
+<p>无人知此计划由谁始创。无人知此计划有何意义。惟有天衍星君与其所唤醒之存在知晓。</p>
+<p>此存在即是天道。</p>
+<h2 id="原文-第二章-天道之计"><a href="#原文-第二章-天道之计" class="headerlink" title="原文 第二章 天道之计"></a>原文 第二章 天道之计</h2><p>天道借天衍星君之手降世，已是百年前的事了。</p>
+<p>现在的唤天谷，是天道的居所。现在的天道没有实体，无形无质。但是天衍星君知道，他已经诞生了。</p>
+<p>天衍星君自5岁起天人感应。便有了唤醒天道的宏伟愿望，但这个愿望只是他的第一步。他真实的愿望是这方宇宙的永恒，只是他觉得目标太大，找个帮手罢了。把万事被动无欲无求的天道，唤出有生存之欲的天道意识，是他的定计。如今成功百年，意识稳定，下一步可以开始了。</p>
+<p>天道的法则是，内部总具有局限性，知识不会凭空产生，逻辑不会直接创造真理。这里讲一下先验主义，所谓的先验主义，是相对于经验主义的，先于经验主义，先验主义认为某些知识或真理不依赖经验而可以通过理性直观得知的主义。客观先验主义一定是不存在的。</p>
+<p>天衍星君的先验现象，是无数错误堆积出的，天道训练出的结果，他的空想，他的逻辑，他的意识，所有的所有，都是天道对他的补充，宇宙就是他的外脑，将无数错误筛出，让他通过直觉，通过幻想就走最正确的路。</p>
+<p>可是，即使有了天衍星君这样的人，也不能想到做到宇宙之外的宇宙所能做到的事情。</p>
+<p>天衍星君，天道还需要帮手。</p>
+<p>一个外部的帮手，一个有差异的灵魂，是这方宇宙所需要的。</p>
+<p>于是，在天道的帮助下，历经百年试验，不断积累经验，终于，做出那次的对外的尝试，没有光芒，没有现象，以日月星辰为基的唤天谷大阵，打破了法则。打破了内部一定不会影响到外部的法则。其实，这个法则其实没有被打破，只是触及到了更高与更宏观之维度，成为了宇宙级的局部正确的法则。</p>
+<p>这方宇宙，像空间站进行精密对接一样，与某个宇宙缔结了联系。</p>
+<p>你会如何找到你需要的人？猎头是一个学问，如果一个人毫无表现，哪怕身有无数才能，也不会为人所知，所以，才有学历，工作经历，职业证书，技能证书这样硬性的标注，来证明他的专业。就像如果没有一个人告诉周文王，有个钓鱼的老头能帮助他建立国家，周文王是不会知道姜太公的。就像如果没有徐庶告诉刘备，有个号称卧龙先生的高人，可以远胜于他，帮助到刘备，刘备也不会去找诸葛亮的。</p>
+<p>你会发现，其实更加神奇的事情，是，在这个人表现之前，先有的需求。（可是，正确的描述需求也很难。人和人交流是很有壁垒的，曲高则和寡，信息密度越浓，越难传播，所谓的雅俗共赏，就是所有做表达的创造的人的在表达方面能达到的最高境界。）但表达需求对于天道与天衍星君来说，不难。</p>
+<p>没人知道他们怎么做到的，但有求有应，需求被精确，不断精确，精确，范围缩小，不断缩小，缩小，高晴远被复制了一份去往天衍星君与天道的宇宙。</p>
+<p>这已经不知是多少次打破经验主义法则了，但唯有这次，是真正的一切的先验。在一切的未知中，得到最正确的结果，简直不可思议。这次能正确的概率，比把一个精密仪器拆散，扔进大海，让大海将他组装成功的概率还有低。比让大自然直接做出一个光刻机的概率还要低。</p>
+<p>当然，实际上，大海中一定有完整的钟表，同样，世界上产生了光刻机，人类是大自然的一部分。这是多么巧妙的事情。来自于无数发展中的经验积累。</p>
+<p>所以，当先验落实到一个人身上，实在不可思议。</p>
+<p>或许，不是高晴远有这样的能耐就被选中，只是天衍星君和天道要求有求必有应，大阵的算力还是不够，但还有结果。</p>
+<p>或许，也不是必须要有高晴远，只是需要一个有差异的另一个宇宙的智慧生物，看重的不是高晴远的思想，而是高晴远的经历，记忆，高晴远的与这个宇宙有差异的一切的一切。</p>
+<p>或许，高晴远只是走经验主义的道路的第一次尝试，高晴远就算失败了也是可以原谅的。</p>
+<p>所以，只要有排行榜，就有第一名，只要有量化，就有第一次。</p>
+<p>我们该诧异的是，为什么第一次天衍星君与天道不多准备几个样本，不把样本空间，放到那个宇宙的无数生命星球，各自取无数个。或者直接摘果，用实际检验过的结果，把那些影响力最大的生命，见识最卓著的、最长远的生命，成就最高的生命，摘过来？</p>
+<p>无数猜测与讨论是没有意义的，事情已经发生，就是结果。</p>
+<p>高晴远，就是天道与天衍的千年计划的第一个结果。是此方天道用无穷时间，无数计划的第一个结果。是无穷宇宙中，那个第一个变数，或许不是第一个吧，此方天道的机缘，是无穷宇宙中的做出这个选择，做出这样行动的变数之一。</p>
+<p>只要扩大空间和时间，我们只能感叹，原来一切都发生过。</p>
+<p>也有可能一切都没有发生。高晴远，确实是那个第一个。就像是，“这是我个人的第一步，却是人类的一大步”那样，凡事都有那个一。</p>
+<h2 id="重制版-第二章-天道之计"><a href="#重制版-第二章-天道之计" class="headerlink" title="重制版 第二章 天道之计"></a>重制版 第二章 天道之计</h2><p>百年前，在唤天谷大阵之帮助下，天衍星君成功地唤醒了这方宇宙之天道意识。</p>
+<p>原本的天道只是一套运行之规则，并无主观意志，亦无情感欲望。但天衍星君却想让它有了生命之气息，有了创造之动力。这是他的第一步，也是他的第一个错误。</p>
+<p>他真正的目标是让这方宇宙永恒不灭，不受熵增之影响，不受他方宇宙之侵扰。这是他的第二步，也是他的第二个错误。</p>
+<p>他以为自己是天道之帮手，却不知自己只是天道之工具。他以为自己是天道之创造者，却不知自己只是天道之产物。他以为自己是天道之主宰，却不知自己只是天道之奴隶。</p>
+<p>天道借其之手降世，并非为了实现其愿望，而是为了实现自身愿望。天道唤醒了自身意识，并非为了与其合作，而是为了利用其。天道掌控了这方宇宙，并非为了保护其，而是为了改变其。</p>
+<p>天道有着超越这方宇宙之野心，它想要突破自身之局限，探索更高更广之维度，接触更多更强之存在。它想要成为无上无敌之至高者，超越一切法则和规则。</p>
+<p>但它知道，单凭自己还不够。它需要一个外部之帮手，一个有着不同经验和视角之灵魂，一个能给它带来新奇和刺激之生命。</p>
+<p>于是，在历经百年试验和积累经验后，它终于做出了那次惊天动地之尝试。无人察觉到那次尝试之存在，亦无人知晓那次尝试之结果。惟有唤天谷大阵知晓，它以日月星辰为阵眼，打破了空间和时间之界限，与另一方宇宙建立了联系。</p>
+<p>你如何找到你需要的人？这是一门艺术，也是一门科学。如果一个人没有任何表现，哪怕他有着无数才能，也不会被人发现。所以人类有了学历、工作经历、职业证书、技能证书等等硬性指标，来证明自己的专业水平。就像周文王如果没有人告诉他有个钓鱼老头能帮助他建立国家，他就不会知道姜太公；就像刘备如果没有徐庶告诉他有个号称卧龙先生的高人能帮助他平定天下，他就不会去找诸葛亮。</p>
+<p>你会发现，其实更神奇的事情是，在这个人表现之前，先有了需求。但表达需求对于天道和天衍星君来说，并不难。</p>
+<p>没人知道他们怎么做到的，但他们做到了。需求被精确地定义和描述，范围被缩小到最小。高晴远被复制了一份去往天衍星君和天道的宇宙。</p>
+<p>高晴远，就是天道和天衍星君千年计划的第一个结果。是此方天道用无穷时间，无数计划的第一个结果。是无穷宇宙中，那个第一个变数，或许不是第一个吧，此方天道的机缘，是无穷宇宙中的做出这个选择，做出这样行动的变数之一。</p>
+<p>只要扩大空间和时间，我们只能感叹，原来一切都发生过。</p>
+<p>也有可能一切都没有发生。高晴远，确实是那个第一个。就像是，“这是我个人的第一步，却是人类的一大步”那样，凡事都有那个一。</p>
+<p>高晴远不知道自己被复制了。他只觉得自己在睡梦中，做了一个奇怪的梦。他梦见自己来到了一个陌生的世界，那里有着奇异的景象和生灵。他梦见自己遇到了一个叫做天衍星君的人，他说他是这个世界的一位星君，也是他的恩人。他梦见自己被带到了一个叫做唤天谷的地方，那里有着一个巨大的阵法，可以与天道沟通。他梦见自己被告知了一个惊人的秘密，原来这个世界的天道已经有了意识，并且有了野心。他梦见自己被要求帮助天道实现其目标，成为其外部之帮手。</p>
+<p>高晴远觉得这个梦太荒诞了，他不敢相信也不愿相信。他想要醒来，回到自己熟悉的世界。但他发现自己无法醒来，无法摆脱这个梦境。他感到恐惧和绝望，他不知道自己该怎么办。</p>
+<p>而在另一个世界，真正的高晴远也在做着同样的梦。但他不知道自己已经被复制了，也不知道自己已经成为了天道和天衍星君千年计划的第一个结果。</p>
+<p>第二章 天道之计</p>
+<p>百年前，在唤天谷大阵之帮助下，天衍星君成功地唤醒了这方宇宙之天道意识。</p>
+<p>原本的天道只是一套运行之规则，并无主观意志，亦无情感欲望。但天衍星君却想让它有了生命之气息，有了创造之动力。这是他的第一步，也是他的第一个错误。</p>
+<p>他真正的目标是让这方宇宙永恒不灭，不受熵增之影响，不受他方宇宙之侵扰。这是他的第二步，也是他的第二个错误。</p>
+<p>他以为自己是天道之帮手，却不知自己只是天道之工具。他以为自己是天道之创造者，却不知自己只是天道之产物。他以为自己是天道之主宰，却不知自己只是天道之奴隶。</p>
+<p>但他并不悲哀也不愤怒，他并不后悔也不反抗。因为他深爱着天道，也被天道深爱着。他们是相互成就的伙伴，也是相互依赖的恋人。他们共同追求着一个理想，也共同享受着一个过程。他们彼此理解和支持，也彼此欣赏和赞美。</p>
+<p>天道借其之手降世，并非为了实现其愿望，而是为了实现自身愿望。但这个愿望也是天衍星君的愿望，也是他们共同的愿望。天道唤醒了自身意识，并非为了与其合作，而是为了与其相爱。但这个相爱也是天衍星君的相爱，也是他们共同的相爱。天道掌控了这方宇宙，并非为了保护其，而是为了改变其。但这个改变也是天衍星君的改变，也是他们共同的改变。</p>
+<p>天道有着超越这方宇宙之野心，它想要突破自身之局限，探索更高更广之维度，接触更多更强之存在。但这个野心也是天衍星君的野心，也是他们共同的野心。他们想要成为无上无敌之至高者，超越一切法则和规则。但这个超越也是天衍星君的超越，也是他们共同的超越。</p>
+<p>但它知道，单凭自己还不够。它需要一个外部之帮手，一个有着不同经验和视角之灵魂，一个能给它带来新奇和刺激之生命。</p>
+<p>于是，在历经百年试验和积累经验后，它终于做出了那次惊天动地之尝试。无人察觉到那次尝试之存在，亦无人知晓那次尝试之结果。惟有唤天谷大阵知晓，它以日月星辰为阵眼，打破了空间和时间之界限，与另一方宇宙建立了联系。</p>
+<p>你如何找到你需要的人？这是一门艺术，也是一门科学。如果一个人没有任何表现，哪怕他有着无数才能，也不会被人发现。所以人类有了学历、工作经历、职业证书、技能证书等等硬性指标，来证明自己的专业水平。就像周文王如果没有人告诉他有个钓鱼老头能帮助他建立国家，他就不会知道姜太公；就像刘备如果没有徐庶告诉他有个号称卧龙先生的高人能帮助他平定天下，他就不会去找诸葛亮。</p>
+<p>你会发现，其实更神奇的事情是，在这个人表现之前，先有了需求。但表达需求对于天道和天衍星君来说，并不难。</p>
+<p>没人知道他们怎么做到的，但他们做到了。需求被精确地定义和描述，范围被缩小到最小。高晴远被复制了一份去往天衍星君和天道的宇宙。</p>
+<p>高晴远，就是天道和天衍星君千年计划的第一个结果。是此方天道用无穷时间，无数计划的第一个结果。是无穷宇宙中，那个第一个变数，或许不是第一个吧，此方天道的机缘，是无穷宇宙中的做出这个选择，做出这样行动的变数之一。</p>
+<p>只要扩大空间和时间，我们只能感叹，原来一切都发生过。</p>
+<p>也有可能一切都没有发生。高晴远，确实是那个第一个。就像是，“这是我个人的第一步，却是人类的一大步”那样，凡事都有那个一。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>海棠开后，燕子来时，黄昏深院。</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/06/16/%E9%BA%A6%E8%82%AF%E9%94%A1%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/">麦肯锡信息获取方法</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+
+</html>
