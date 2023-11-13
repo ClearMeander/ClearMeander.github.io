@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>1112周报 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Meander</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Meander</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">1112周报</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">November 13, 2023&nbsp;&nbsp;22:36:55</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/00efa7039d950a70ed4dab57798ba4a1.png" alt="花丛"></p>
+<h2 id="上周做了什么？"><a href="#上周做了什么？" class="headerlink" title="上周做了什么？"></a>上周做了什么？</h2><p>睡了几天懒觉，熬了几天夜，每天吃两顿，好熬人啊。</p>
+<h2 id="上周计划完成情况？"><a href="#上周计划完成情况？" class="headerlink" title="上周计划完成情况？"></a>上周计划完成情况？</h2><p>下周主要做的事<br>1产品上架，亚马逊学习（未达成）<br>2写我的对于爱情看法的作品（未达成）<br>3阅读马林思维，定位，以及王冲，并且写观后感（未达成）<br>4早睡早起，对自己的身体负责（未达成）<br>下周不做的事：<br>三国杀，我弃了，绝不打开（已达成）<br>空白的心，我想少看（已达成）<br>小说，不看了（没多看，看了一点点）十分的无聊和枯燥</p>
+<h2 id="计划外做的事情与结果吧"><a href="#计划外做的事情与结果吧" class="headerlink" title="计划外做的事情与结果吧"></a>计划外做的事情与结果吧</h2><p>我下载了小红书，主要是研究，了解，学习。<br>看了很多微信的视频号，对，还是看了一下短视频。<br>然后是一念逍遥飞升，以及fgo无限池活动开始。</p>
+<h2 id="小红书和微信视频号给我的感触："><a href="#小红书和微信视频号给我的感触：" class="headerlink" title="小红书和微信视频号给我的感触："></a>小红书和微信视频号给我的感触：</h2><h3 id="漫天星星，而我看到茫茫夜"><a href="#漫天星星，而我看到茫茫夜" class="headerlink" title="漫天星星，而我看到茫茫夜"></a>漫天星星，而我看到茫茫夜</h3><p>哎，我是真不知道天高地厚啊。<br>认识的人里也多是在网上活跃的，而现实里不充实的人。以前看贴吧，知乎，一直给我推送各种社会矛盾问题，而这些人与我看到的世界也高度相似。有共同的游戏娱乐，关注共同的网络上的乐子，对未来有完全相同的悲观。<br>我甚至曾觉得我应该是这个愚昧世界里的救主。<br>但是我刷了两天的微信视频号，看了很多，有关餐饮类，娱乐的，生活的，爱情的小剧场，很多反转的很有意思。也看了很多跳舞的，唱歌的，健身的，射击啊，单车啊，摄影啊，风景啊，旅游啊，等等。还有科技类的，研发一个非标自动化机械的周期是3天，很规范也很效率。<br>外面的世界丰富多彩，而我曾经看不到也想象不到，厌世而疲惫。</p>
+<h3 id="高山不曾看你一眼"><a href="#高山不曾看你一眼" class="headerlink" title="高山不曾看你一眼"></a>高山不曾看你一眼</h3><p>他说：把自己许配给宇宙的第一步…是变成高山，变成所有人都翻不过的高山，遇到了只能绕着走～<br>一座无论是踢还是踩，无论是小心翼翼的呵护还是精心的改造，都无法打动的高山。<br>竭尽全力爬到了山顶上，环顾四周却发现只有下山的路。<br>陪伴高山，高山也不会跟你环游世界。<br>离开高山，高山也不会阻拦行动丝毫。<br>一座绝不可能的高山～<br>（后半段其实很没必要，就不发出来了，我只是想说，我要抵抗干扰，成为不可逾越的高山）</p>
+<h3 id="我对女孩的思索"><a href="#我对女孩的思索" class="headerlink" title="我对女孩的思索"></a>我对女孩的思索</h3><p>说实话，我承认之前还是很有偏见，我是恶劣群体的一分子，是污水中游荡的鱼。我知道她们现实。但我忽略的一点，我好像一直以来都任性的认为，女性不养活自己也可以。实际上，女性的工作和学习的态度很端正。三观很正。是我很傲慢。</p>
+<h2 id="还有别的事吗？"><a href="#还有别的事吗？" class="headerlink" title="还有别的事吗？"></a>还有别的事吗？</h2><p>我的一个人的寂寞和担心，还有蹉跎啊。和各个人有一搭没一搭的聊天，浪费时间。<br>直播的话术，运营的脚本，等等，需要我学习。</p>
+<h2 id="计划呢？"><a href="#计划呢？" class="headerlink" title="计划呢？"></a>计划呢？</h2><p>延续上周的计划，以及略微变更：<br>下周主要做的事<br>1产品上架，亚马逊学习<br>2写我的对于爱情看法的作品<br>3学习电商，直播运营的知识<br>4早睡早起，对自己的身体负责<br>5看纪录片，扩展知识面<br>6搜集句子，录音发布视频<br>下周不做的事：<br>三国杀，我弃了，绝不打开<br>空白的心，我想少看<br>小说，不看了</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>peace and hard</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/11/13/%E8%B4%A2%E6%8A%A51113/">财报1113</a>
+            
+            
+            <a class="next" rel="next" href="/2023/11/09/%E8%B4%A2%E6%8A%A51109/">财报1109</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+</html>
