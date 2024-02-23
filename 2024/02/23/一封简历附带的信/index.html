@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>一封简历附带的信 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Meander</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Meander</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">一封简历附带的信</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 23, 2024&nbsp;&nbsp;18:02:44</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="https://www.z4a.net/images/2023/04/21/6df717d597a44ed7f31d91e6b3c8a877.png" alt="夏日"></p>
+<h2 id="信的开始，致魏先生"><a href="#信的开始，致魏先生" class="headerlink" title="信的开始，致魏先生"></a>信的开始，致魏先生</h2><p>我花些时间，写下这份自我介绍的信，希望打动您，让您忽略一些不好的因素，来给我一个实习的机会。<br>首先，我很荣幸遇到您，那次招聘会上的几句友好的交流，给了我一种一扫阴翳拨云见日的感觉，我心中有了新的希望。<br>然后，恭喜您遇到了我，我绝对让您觉得，认识我很值得。<br>那么，谈谈我吧。<br>我在简历上写过的关于2023年我干过的事情，我自认为有价值的思考。</p>
+<h2 id="首先谈谈世界观人生观价值观问题。"><a href="#首先谈谈世界观人生观价值观问题。" class="headerlink" title="首先谈谈世界观人生观价值观问题。"></a>首先谈谈世界观人生观价值观问题。</h2><h3 id="世界观"><a href="#世界观" class="headerlink" title="世界观"></a>世界观</h3><ul>
+<li>宇宙大爆炸到地球的诞生：大爆炸（138亿年前），基本粒子（前几分钟），原子合成，自由光与光波（38万年），星系形成，太阳系（46亿年前）</li>
+<li>物种起源与演化：在地球的种种巧合的环境中，再经历过漫长的演化，地球上产生了生命，从第一个氨基酸开始，到诞生原核生物，然后细胞生物，藻类，真核生物，低级的动物，无脊椎动物，鱼类，两栖类，陆生爬行动物，恐龙和鸟类，哺乳动物，再到人类。</li>
+<li>人文的发展与脉络：文化（思想，文化），艺术（绘画，雕塑，乐曲，戏曲，表演，等等文化都是时代的沉淀），科技（每一步科技的发展都是令人神往），建筑（建筑设计，我们生活的地方都是人类建筑的奇迹），食物（粮蔬果禽畜，都是前人摸索，煎炒蒸煮炸，都是前人创造。农业饮食文化以及相关产业），衣服（各自形式的衣服以及衣服的相关产业），</li>
+</ul>
+<p>我写的这些，都让我觉得，我作为人，在这个时代来体验这个世界真的太好了，太幸运了。</p>
+<h3 id="人生观"><a href="#人生观" class="headerlink" title="人生观"></a>人生观</h3><p>我的人生观经过了很多次重塑，最后形成了现在我认为合理的结果。</p>
+<ul>
+<li>辩证的看待矛盾<ul>
+<li>绝对乐观的看待问题，当发现一种比较让人难过的事情时，选择的是解决问题，从解决问题中实现自身价值，也就是说，别人看见的是绝境，我看见的是需求，这种思想与毛泽东思想的《实践论》中要进行改造世界的实践的思想是不谋而合的，这是一种绝对乐观的精神，乐观不是说把坏事看成好事，而是制止坏事发展，将事情做好。</li>
+<li>主动性问题：基础是有的人被动，就要有人主动。我想要实现某个事情，就需要我主动去做。比如，我以前在思考，为什么大学生就业困难，去年的孔乙己思潮我破解了，就业不行就去创业，没人教我创业，我就主动了解，没人投资我就主动靠近投资人。主动的人先选择世界。</li>
+<li>换位思考的问题：去年4月有一件事，特斯拉在上海的工厂给工人更高的工资，汽车的售价又给低的价位。这件事被国家反对了，理由是恶意竞争。我们作为消费者的角度，或者打工者的角度，特斯拉工厂这样做很好，但是作为国内造车的企业的角度，这会严重挤压他们的生存空间。影响整个国内的产业链，影响国内的研发生态。牵一发而动全身。</li>
+<li>集体和个体的矛盾：内部问题找共性，从外部解决，联合一致对外，共同的利益，共同的展望，共同的敌人，才能相互妥协。</li>
+<li>责任和权力的矛盾：谁负责什么事，就要给谁相应的权力。</li>
+</ul>
+</li>
+<li>谈谈定位问题<ul>
+<li>我是一个普通人。放下骄傲，我在去年，由于对社会经济的思考，对于创业行动的思考，对于种种的思考，让我感到骄傲。这时候骄傲有两种危害：<ul>
+<li>我认为我理解他人而他人不理解我，不愿意与亲人朋友在事业方向上进行沟通交流。同时，对亲人朋友有点轻蔑的态度，使得我几乎众叛亲离。</li>
+<li>自己犯了错误自己无法接受，对自己自视过高，不能允许自己犯错误，犯错误后不能快速走出来。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>看待命运<br>从我那个对未来，对解决问题的角度来说，我是会对命运披荆斩棘的人。<br>我自己有一套决定论：命运是我身后的影子，而非是我的枷锁，我的未来有无限可能，真正被决定的只有过去。</li>
+<li>团结朋友<br>我不愿意做一个独善其身的人，做大事的人必须要团结自己的伙伴。</li>
+</ul>
+<h3 id="价值观"><a href="#价值观" class="headerlink" title="价值观"></a>价值观</h3><p>我所要实现的人生价值，是要让亲朋好友，要让人民群众，要让全人类过上好日子。<br>我对这个世界最珍重的地方，就在我世界观里说了，研究世界的运行规律就是我最喜欢做的事，无论科学的还是社会的。<br>我人生有几大理想：</p>
+<ul>
+<li>让亲朋好友们一世安稳，在我出身的农村，那些我的亲戚，在我受过教育的学校，那些平凡的朋友，虽然他们普普通通，但我希望让他们过的更好。这是我想要创业的初衷。</li>
+<li>学会更多的技术，当个科学家。</li>
+<li>让人类文明延续一亿年，我的终极的追求，这个事情，我不便在这里说了。</li>
+</ul>
+<h2 id="再谈谈我对经济的一些认知"><a href="#再谈谈我对经济的一些认知" class="headerlink" title="再谈谈我对经济的一些认知"></a>再谈谈我对经济的一些认知</h2><p>我将资源划分为第一次分配和第二次分配</p>
+<h3 id="站在一级分配的角度"><a href="#站在一级分配的角度" class="headerlink" title="站在一级分配的角度"></a>站在一级分配的角度</h3><ul>
+<li>第一级分配：钱从哪里来？国家财政来。国家通过批准经费，调动人民群众，让某个地区得以建设，某种科学技术发展突破。那些由国家批准的经费就是资源的第一次分配。</li>
+</ul>
+<h3 id="站在二级分配的角度（市场经济）"><a href="#站在二级分配的角度（市场经济）" class="headerlink" title="站在二级分配的角度（市场经济）"></a>站在二级分配的角度（市场经济）</h3><ul>
+<li>将金钱作为分配手段会产生什么问题？二级分配的生产和分配被割裂开，生产活动并非直接获得金钱，非第一级分配的单位，都需要经过市场才能把生产的结果换成金钱。</li>
+<li>二级分配的问题，那些由第一级分配得来金钱的人，他们的消费的选择决定了市场走向。</li>
+<li>资本朝着增长的方向扩张，而非朝着最需要的地方扩张（企业的社会责任感问题）</li>
+<li>零和博弈的二级市场，竞争激烈，生产和分配的割裂，又会导致产能过剩</li>
+<li>资本的增长来自于对外扩张，对外扩张有极限，拉内需拉不动（一级分配的问题）</li>
+</ul>
+<h3 id="站在银行的角度"><a href="#站在银行的角度" class="headerlink" title="站在银行的角度"></a>站在银行的角度</h3><ul>
+<li>国内的银行可以进行庞氏骗局（河南的银行事件，最后指望央行合并重组兜底）</li>
+<li>抵押贷款，信用贷款，典当行而非投行</li>
+<li>贷款周期经济增长，还款周期经济衰退</li>
+</ul>
+<p>其实我好像都说了，好像又没说啥。经济问题都是问题，不好细说，细说普通人太惨了。</p>
+<h2 id="来聊聊一些奇妙的体验"><a href="#来聊聊一些奇妙的体验" class="headerlink" title="来聊聊一些奇妙的体验"></a>来聊聊一些奇妙的体验</h2><ul>
+<li>独孤九剑：站在对方的角度否定对方的行为，使人陷入自我怀疑中，对他人的攻击性一点不见。对自己来说，要保持眼里只有对方的弱点，无视别人的攻击，然后弱点打击。</li>
+<li>人情债：不求回报的在对方立场上帮助别人，有良心的都有负担</li>
+<li>理性的视角：看文章看对话的时候，用逻辑判断对方想要表达什么，对方的意图是什么</li>
+<li>感性的视角：代入文章，感受情绪，感受感情</li>
+<li>长远的视角：用发展的眼光看问题</li>
+<li>无穷大的视角：用一亿年的尺度，一个宇宙的角度去看现实发生的事情，比较宏观。</li>
+<li>天人合一的状态：天地与我并生，万物与我为一。我们都是一体的，我们是世界的一部分，大我就是这个世界。</li>
+<li>情绪的漩涡：情绪化的人的情绪来自于联想，来自于上升问题的高度。把个人行为上升到集体，把一个小事上升到人的全部。</li>
+<li>人的价值很需要被外人肯定：多使别人展现自己的价值，然后肯定。</li>
+<li>针对于情绪化癔想：1表达自己的清晰的态度（是否站在对方的立场上看关系了）2不要只指出问题，而不帮助被人改正问题（看关系了）</li>
+</ul>
+<h2 id="结合纽兰德公司的展望"><a href="#结合纽兰德公司的展望" class="headerlink" title="结合纽兰德公司的展望"></a>结合纽兰德公司的展望</h2><h3 id="我个人的希望与需求"><a href="#我个人的希望与需求" class="headerlink" title="我个人的希望与需求"></a>我个人的希望与需求</h3><ul>
+<li>合适的薪水（实习期的工资主要来自国家补贴，但我希望也许我可以争取更多，这个无所谓）食宿问题，我想向您请教一下合适的解决办法</li>
+<li>除了实习的培养计划外，我想尝试系统化的了解纽兰德公司的一切设计，研发，生产，等流程，除了产品方面，还有外贸的方面，我想在未来有产品转销售的机会，然后了解纽兰德的管理模式。研究一下大企业内部是怎么做的。这些是我对世界的体验的一部分。</li>
+</ul>
+<h3 id="结合纽兰德实业有限公司的展望"><a href="#结合纽兰德实业有限公司的展望" class="headerlink" title="结合纽兰德实业有限公司的展望"></a>结合纽兰德实业有限公司的展望</h3><ul>
+<li>我试试，能不能把这个公司做到世界500强（人总要做梦的嘛，我擅长做梦）</li>
+</ul>
+<p>我已经言简意赅的表达完我在去年进行过的思想的进化，向你展示了我的学习能力以及悟性。希望我们能成为朋友。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>peace and hard</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/02/15/%E5%AF%BC%E8%AE%BA/">导论</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+</html>

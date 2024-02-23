@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>导论 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Meander</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Meander</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">导论</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 15, 2024&nbsp;&nbsp;20:00:08</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%91%A8%E6%8A%A5/">周报</a>
+                            
+                                <a href="/categories/%E5%91%A8%E6%8A%A5/%E6%AF%8F%E6%97%A5%E8%B4%A2%E5%8A%A1%E6%8A%A5%E5%91%8A/">每日财务报告</a>
+                            
+                                <a href="/categories/%E5%91%A8%E6%8A%A5/%E6%AF%8F%E6%97%A5%E8%B4%A2%E5%8A%A1%E6%8A%A5%E5%91%8A/%E9%9A%8F%E7%AC%94/">随笔</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://www.z4a.net/images/2023/04/21/6df717d597a44ed7f31d91e6b3c8a877.png" alt="夏日"><br><img src="https://www.z4a.net/images/2023/04/21/00efa7039d950a70ed4dab57798ba4a1.png" alt="花丛"></h2><p>这是一个导论提纲，来说明我到底研究了什么问题。<br>一大类，交流，谈判，恋爱<br>二大类，一个年轻人如果走出迷惘，人生观，价值观，博弈论，方法论<br>三大类，认识世界认识经济<br>四大类，人的思考方式<br>五大类，哲学，虚无主义<br>被爱，性感，</p>
+<p>对自己的锚定：<br>对待过去的态度：吸取经验和教训（历史虚无主义者——现在有了情绪，会选择和过往一刀两断）<br>对待未来的态度：事业为先（追逐事而非追逐人）<br>对待现实的态度：绝对乐观<br>对待人的态度：尊重平凡的人，不要改变人，不要定义人（减少对人的评价，减少对自己思考的表达，多表达自己的行动）<br>爱人的方式：绝对爱人（不要看清人）<br>改变人的方式：</p>
+<ul>
+<li>变更别人立场（指出对外界的认知错误，有的人只看到了一点点就以为是全部，于是为其补充更宏观的视角，主要是：理解他人，为什么他人会那样想，那样做。）</li>
+<li>指出他人表达中不合理的地方（他人自身逻辑我其实并不关注）</li>
+<li>站在对方立场上否定对方的行为，情绪，压抑其本性，然后给出自以为是的理性解决<br>这里有一个重要的问题，就是我很难站在自我立场上和人对抗，我在借其他人的立场。（我在自我立场上做的最多的事情是：能不能别管我？）<br>持久保持自我立场，学会爱自己。爱人爱己，敬人敬己。<br>思维模式：目标导向<br>对待外界的看法：一切都是体验，一切都是认知，接受有人有错误认知，认识更大的世界<br>对待现在的问题：一切都可变，一切都可改，一切以当前处境为开始，进行对未来的理性处理<br>做人的问题：只做事，不做人（把事情办正确，把事情办好为先，全心全意为目标服务）<br>对待自己的定位：一个能做多少做多少的普通人。</li>
+</ul>
+<p>谁有什么疑虑<br>合作就是合作<br>我应该把内容都记录下来，从此不必思考。</p>
+<p>统计我需要的信息：<br>关于爱与美，关于艺术，人文<br>关于科学技术</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>peace and hard</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2024/02/23/%E4%B8%80%E5%B0%81%E7%AE%80%E5%8E%86%E9%99%84%E5%B8%A6%E7%9A%84%E4%BF%A1/">一封简历附带的信</a>
+            
+            
+            <a class="next" rel="next" href="/2024/02/02/%E7%A0%94%E7%A9%B6%E7%9A%84%E7%AC%AC%E5%8D%81%E5%85%AD%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E6%88%91%E5%AF%B9%E4%B8%96%E7%95%8C%E7%9A%84%E8%AE%A4%E8%AF%86/">研究的第十六个问题：我对世界的认识</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+</html>
