@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="ClearMeander">
+
+
+    <meta name="subtitle" content="Meander's Blog">
+
+
+
+
+<title>关于洛氏维氏不是硬度机和影像仪 | Meander&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Meander</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Meander</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">关于洛氏维氏不是硬度机和影像仪</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">ClearMeander</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 5, 2024&nbsp;&nbsp;21:56:15</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%B7%A5%E5%8E%82%E8%A7%82%E5%AF%9F/">工厂观察</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://www.z4a.net/images/2023/04/21/6df717d597a44ed7f31d91e6b3c8a877.png" alt="夏日"></h2><h2 id="暂停更新8d了，先说说最近几天做了什么，学了什么"><a href="#暂停更新8d了，先说说最近几天做了什么，学了什么" class="headerlink" title="暂停更新8d了，先说说最近几天做了什么，学了什么"></a>暂停更新8d了，先说说最近几天做了什么，学了什么</h2><h3 id="制了两个excel表格，分别是工作汇报表，和每日检验结果统计表，改进了高度仪测量这个产品尺寸的方法"><a href="#制了两个excel表格，分别是工作汇报表，和每日检验结果统计表，改进了高度仪测量这个产品尺寸的方法" class="headerlink" title="制了两个excel表格，分别是工作汇报表，和每日检验结果统计表，改进了高度仪测量这个产品尺寸的方法"></a>制了两个excel表格，分别是工作汇报表，和每日检验结果统计表，改进了高度仪测量这个产品尺寸的方法</h3><ul>
+<li>工作汇报表，后续附加个预览图</li>
+<li>每日检验结果统计表，这个就算了</li>
+<li>高度仪测量这个产品的尺寸，要测量的单个零件的尺寸有3种6处，需要频繁的按清零以及移动底座块，我对它的优化是，批量检测一处，再批量检测下一处，可以不频繁的清零，不频繁的移动底座块，每种测量的尺寸都只需要做一次清零操作就可以轻松执行比对。</li>
+</ul>
+<h3 id="学了并用了下洛氏硬度仪，维氏硬度仪，和影像仪"><a href="#学了并用了下洛氏硬度仪，维氏硬度仪，和影像仪" class="headerlink" title="学了并用了下洛氏硬度仪，维氏硬度仪，和影像仪"></a>学了并用了下洛氏硬度仪，维氏硬度仪，和影像仪</h3><ul>
+<li>洛氏硬度机，齐跟我讲的，这种洛氏硬度计是怎么操作呢？有三个档位，60，100，150，先找到要测量的对应的档位，再找到对应档位的硬度块进行标准硬度比对，在比对和标准值的差距在正负5以内就是正常的，可以进行检验。然后检验方式就是转动底下像海盗船的方向盘那种的轮子，控制检测面升降，在接触到压头的时候，慢慢转动，直到电子显示屏数值到365时松开，等着它自动检验出来结果。</li>
+<li>维氏硬度机，同样是齐讲的，维氏硬度机有两个显微镜，一个压头会转换，每次开机复位到第一个显微镜，这时候调整高度到能够用这个显微镜把金属表面的纹理看清晰，再点击开始按钮，它自动换压头，开始用10kg的力在金属表面压出一个菱形的槽。然后换第二个显微镜头，现在要做的就是通过一些操作让仪器知道压出来的菱形有多大，然后它自动计算出金属硬度。</li>
+<li>影像仪<br>影像仪主要是操作3个方位，z轴调整影像机的镜头高度，让待测件表面清晰，然后另外两个调整x轴，y轴，来测量零件的尺寸</li>
+</ul>
+<h2 id="洛氏硬度仪原理"><a href="#洛氏硬度仪原理" class="headerlink" title="洛氏硬度仪原理"></a>洛氏硬度仪原理</h2><p>洛氏硬度计是一种用于测量金属材料硬度的仪器。其原理是：在规定条件下，用一定形状的压头（金刚石圆锥体或钢球）在试样表面压入一定深度，然后卸除部分试验力，再测定压痕的残余深度。根据残余深度与压痕直径的比值，查出洛氏硬度值。</p>
+<h3 id="洛氏硬度试验方法的优点是："><a href="#洛氏硬度试验方法的优点是：" class="headerlink" title="洛氏硬度试验方法的优点是："></a>洛氏硬度试验方法的优点是：</h3><p>操作简单，读数直观，效率高，适用于大批量零件的硬度检验；<br>测量范围广，可以测量各种硬度的金属材料；<br>试样表面只需较小的加工面，且对试样损伤较小。</p>
+<h3 id="洛氏硬度试验方法的缺点是："><a href="#洛氏硬度试验方法的缺点是：" class="headerlink" title="洛氏硬度试验方法的缺点是："></a>洛氏硬度试验方法的缺点是：</h3><p>测量精度比布氏硬度试验低；<br>对试样表面质量要求较高；<br>不适用于测量淬火钢、渗碳钢等表面硬化层较深的试样。</p>
+<h3 id="洛氏硬度计的结构主要包括："><a href="#洛氏硬度计的结构主要包括：" class="headerlink" title="洛氏硬度计的结构主要包括："></a>洛氏硬度计的结构主要包括：</h3><p>机架：用于支撑仪器的各部件；<br>试验力加载装置：用于施加试验力；<br>压头：用于压入试样表面；<br>测深装置：用于测量压痕的残余深度；<br>指示装置：用于指示硬度值。</p>
+<h3 id="洛氏硬度试验的步骤如下："><a href="#洛氏硬度试验的步骤如下：" class="headerlink" title="洛氏硬度试验的步骤如下："></a>洛氏硬度试验的步骤如下：</h3><p>选择合适的压头和试验力。<br>将试样放在工作台上，并调整其位置，使压头与试样表面垂直接触。<br>施加试验力，并保持一定的时间。<br>卸除部分试验力。<br>测定压痕的残余深度。<br>查出洛氏硬度值。</p>
+<h3 id="洛氏硬度试验的注意事项如下："><a href="#洛氏硬度试验的注意事项如下：" class="headerlink" title="洛氏硬度试验的注意事项如下："></a>洛氏硬度试验的注意事项如下：</h3><p>试样表面应清洁、光滑，无氧化皮、油污等杂质。<br>压头与试样表面应垂直接触。<br>试验力应平稳地施加和卸载。<br>测定压痕残余深度时，应使用合适的测深装置。</p>
+<h3 id="洛氏硬度计的应用范围很广，主要用于："><a href="#洛氏硬度计的应用范围很广，主要用于：" class="headerlink" title="洛氏硬度计的应用范围很广，主要用于："></a>洛氏硬度计的应用范围很广，主要用于：</h3><p>机械制造业：用于检验各种金属零件的硬度，如齿轮、轴承、弹簧等；<br>冶金工业：用于检验各种金属材料的硬度，如钢、铁、铝、铜等；<br>金属加工业：用于检验金属加工过程中的硬度变化，如淬火、退火、冷加工等。</p>
+<h2 id="维氏硬度仪原理"><a href="#维氏硬度仪原理" class="headerlink" title="维氏硬度仪原理"></a>维氏硬度仪原理</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>维氏硬度计是一种用于测量金属材料硬度的仪器。其原理是：在规定条件下，用一定形状的压头（136°正四棱锥金刚石压头）在试样表面压入一定深度，然后卸除试验力，再测定压痕的对角线长度。根据压痕对角线长度与试验力的比值，查出维氏硬度值。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
+<li>准备工作<br>选择合适的压头和试验力。<br>将试样放在工作台上，并调整其位置，使压头与试样表面垂直接触。<br>清除试样表面的氧化皮、油污等杂质。</li>
+<li>测量<br>施加试验力，并保持一定的时间。<br>卸除试验力。<br>用测微目镜测量压痕的对角线长度。</li>
+<li>计算硬度值<br>根据下式计算维氏硬度值：</li>
+</ul>
+<p>HV &#x3D; 1.8544F &#x2F; d^2<br>式中：</p>
+<p>HV：维氏硬度值（HV）<br>F：试验力（N）<br>d：压痕对角线长度（mm）</p>
+<ul>
+<li>注意事項<br>试样表面应清洁、光滑，无氧化皮、油污等杂质。<br>压头与试样表面应垂直接触。<br>试验力应平稳地施加和卸载。<br>测定压痕对角线长度时，应使用合适的测微目镜。</li>
+</ul>
+<h3 id="应用范围"><a href="#应用范围" class="headerlink" title="应用范围"></a>应用范围</h3><p>维氏硬度计的应用范围很广，主要用于：</p>
+<p>机械制造业：用于检验各种金属零件的硬度，如齿轮、轴承、弹簧等；<br>冶金工业：用于检验各种金属材料的硬度，如钢、铁、铝、铜等；<br>金属加工业：用于检验金属加工过程中的硬度变化，如淬火、退火、冷加工等。</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>测量范围广，可以测量各种硬度的金属材料；<br>测量精度高，重复性好；<br>试样表面只需较小的加工面，且对试样损伤较小。</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>操作较复杂，需要经过专门培训；<br>测量速度较慢。</p>
+<h2 id="影像仪的原理和使用方法"><a href="#影像仪的原理和使用方法" class="headerlink" title="影像仪的原理和使用方法"></a>影像仪的原理和使用方法</h2><h3 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h3><p>影像仪是一种利用光学成像原理进行测量的仪器。其原理是：通过光学系统将被测物体成像在CCD相机上，然后利用计算机对图像进行处理和分析，得到被测物体的尺寸、形状、位置等参数。</p>
+<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
+<li>准备工作<br>将影像仪放置在水平平稳的表面上，并连接好电源和相关接口线。<br>打开影像仪软件，并进行系统初始化设置。<br>将被测物体放置在测量台上，并调整其位置，使物体完全进入视野范围。</li>
+<li>测量<br>通过软件控制，调整光源和角度，获取最佳的物体影像。<br>使用软件进行自动对焦和清晰度调整，确保影像清晰。<br>选择合适的测量模式，进行测量。<br>软件会自动计算出被测物体的尺寸、形状、位置等参数。</li>
+<li>数据处理<br>可以对测量结果进行编辑、分析和输出。<br>可以生成测量报告，并保存或导出数据。</li>
+<li>注意事项<br>被测物体表面应清洁、光滑，无氧化皮、油污等杂质。<br>被测物体应放置在测量台的中心位置，并确保其稳定不动。<br>测量过程中应避免振动和干扰，以保证测量结果的准确性。</li>
+</ul>
+<h3 id="应用范围-1"><a href="#应用范围-1" class="headerlink" title="应用范围"></a>应用范围</h3><p>影像仪的应用范围很广，主要用于：</p>
+<p>机械制造业：用于测量各种零件的尺寸、形状、位置等参数，如齿轮、轴承、弹簧等；<br>电子工业：用于测量电子元器件的尺寸、形状、位置等参数，如芯片、电阻、电容等；<br>模具制造业：用于测量模具的尺寸、形状、位置等参数；<br>印刷业：用于测量印刷品的尺寸、形状、位置等参数。</p>
+<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><p>测量精度高，重复性好；<br>测量范围广，可以测量各种尺寸、形状的物体；<br>非接触式测量，不会对被测物体造成损伤；<br>操作简单，易于学习和使用。</p>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>价格较高；<br>对环境光线有一定的要求；<br>被测物体表面材质和颜色可能会影响测量结果。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>ClearMeander</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2023 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>peace and hard</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2024/04/03/4-3%E5%B7%A5%E5%8E%82%E8%A7%82%E5%AF%9F/">4-3工厂观察</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© ClearMeander | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    </script>
+</body>
+</html>
